@@ -1195,9 +1195,8 @@ This allows us to declare a single ODE component for use in the problem regardle
         [final]   5.0000e+00 == gam [deg]
         [final]   1.2500e+00 &lt;= v_over_v_stall  [None]
         [path]    0.0000e+00 &lt;= gam &lt;= 5.0000e+00  [deg]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: checking out_of_order
+
+INFO: checking out_of_order
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/test/lib/python3.10/site-packages/openmdao/recorders/sqlite_recorder.py:227: UserWarning:The existing case recorder file, dymos_solution.db, is being overwritten.
@@ -1312,13 +1311,13 @@ INFO: checking out_of_order
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coloring for &#39;traj.phases.br_to_v1.rhs_all&#39; (class ExplicitFuncComp)
 
-Jacobian shape: (132, 60)  ( 9.79% nonzero)
+Jacobian shape: (132, 60)  ( 9.81% nonzero)
 FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.419314 sec.
-Time to compute coloring: 0.081432 sec.
+Time to compute sparsity: 0.343081 sec.
+Time to compute coloring: 0.071688 sec.
 Memory to compute coloring: 0.250000 MB.
 </pre></div>
 </div>
@@ -1327,13 +1326,13 @@ Memory to compute coloring: 0.250000 MB.
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coloring for &#39;traj.phases.rto.rhs_all&#39; (class ExplicitFuncComp)
 
-Jacobian shape: (132, 60)  ( 9.77% nonzero)
+Jacobian shape: (132, 60)  ( 9.79% nonzero)
 FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.388554 sec.
-Time to compute coloring: 0.081507 sec.
+Time to compute sparsity: 0.323938 sec.
+Time to compute coloring: 0.072279 sec.
 Memory to compute coloring: 0.000000 MB.
 </pre></div>
 </div>
@@ -1347,8 +1346,8 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.389288 sec.
-Time to compute coloring: 0.085762 sec.
+Time to compute sparsity: 0.325637 sec.
+Time to compute coloring: 0.073111 sec.
 Memory to compute coloring: 0.000000 MB.
 </pre></div>
 </div>
@@ -1362,9 +1361,9 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 60  (73.3% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.387295 sec.
-Time to compute coloring: 0.082883 sec.
-Memory to compute coloring: 0.000000 MB.
+Time to compute sparsity: 0.323557 sec.
+Time to compute coloring: 0.072993 sec.
+Memory to compute coloring: 0.125000 MB.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/test/lib/python3.10/site-packages/openmdao/core/system.py:1664: DerivativesWarning:&#39;traj.phases.climb.rhs_all&#39; &lt;class ExplicitFuncComp&gt;: No partials found but coloring was requested.  Declaring ALL partials as dense (method=&#39;jax&#39;)
@@ -1377,12 +1376,12 @@ FWD solves: 16   REV solves: 0
 Total colors vs. total size: 16 vs 111  (85.6% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.511858 sec.
-Time to compute coloring: 0.186341 sec.
-Memory to compute coloring: 1.125000 MB.
+Time to compute sparsity: 0.428843 sec.
+Time to compute coloring: 0.163090 sec.
+Memory to compute coloring: 0.625000 MB.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 5.621327 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 4.662392 seconds.
 Total jacobian shape: (178, 166) 
 
 
@@ -1391,9 +1390,9 @@ FWD solves: 14   REV solves: 0
 Total colors vs. total size: 14 vs 166  (91.6% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 5.621327 sec.
-Time to compute coloring: 0.120603 sec.
-Memory to compute coloring: 0.000000 MB.
+Time to compute sparsity: 4.662392 sec.
+Time to compute coloring: 0.105887 sec.
+Memory to compute coloring: 0.125000 MB.
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/test/lib/python3.10/site-packages/openmdao/core/total_jac.py:1782: DerivativesWarning:Constraints or objectives [(&#39;traj.phases.climb.timeseries.timeseries_comp.gam&#39;, inds=[(0, 0)])] cannot be impacted by the design variables of the problem.

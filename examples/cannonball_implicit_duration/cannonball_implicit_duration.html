@@ -815,8 +815,8 @@ cannonball problem, we will simultaneously find the optimal design for
 the cannonball (its radius) and the optimal flight profile (its launch
 angle). However, here we will use a single phase that terminates at the
 condition</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d8e3d270-fb24-4ab4-8078-bdbad76800fe">
-<span class="eqno">(91)<a class="headerlink" href="#equation-d8e3d270-fb24-4ab4-8078-bdbad76800fe" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-13504d9d-bd6a-4fa0-b65e-bbcb70bdf44f">
+<span class="eqno">(91)<a class="headerlink" href="#equation-13504d9d-bd6a-4fa0-b65e-bbcb70bdf44f" title="Permalink to this equation">#</a></span>\[\begin{align}
     h(t_f) = 0
 \end{align}\]</div>
 <section id="the-cannonball-sizing-component">
@@ -1080,9 +1080,8 @@ necessarily optimal once air resistance is taken into account.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>--- Constraint Report [traj] ---
     --- phase ---
         [initial] 0.0000e+00 &lt;= ke &lt;= 4.0000e+05  [J]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model viewer data has already been recorded for Driver.
+
+Model viewer data has already been recorded for Driver.
 Model viewer data has already been recorded for Driver.
 </pre></div>
 </div>
@@ -1093,12 +1092,12 @@ FWD solves: 6   REV solves: 0
 Total colors vs. total size: 6 vs 303  (98.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.162074 sec.
-Time to compute coloring: 0.057240 sec.
+Time to compute sparsity: 0.128130 sec.
+Time to compute coloring: 0.048449 sec.
 Memory to compute coloring: 0.250000 MB.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.468193 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.391542 seconds.
 Total jacobian shape: (98, 100) 
 
 
@@ -1107,9 +1106,9 @@ FWD solves: 21   REV solves: 0
 Total colors vs. total size: 21 vs 100  (79.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.468193 sec.
-Time to compute coloring: 0.124469 sec.
-Memory to compute coloring: 2.132812 MB.
+Time to compute sparsity: 0.391542 sec.
+Time to compute coloring: 0.104394 sec.
+Memory to compute coloring: 1.125000 MB.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization Problem -- Optimization using pyOpt_sparse
@@ -1118,11 +1117,11 @@ Memory to compute coloring: 2.132812 MB.
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                   29.3217
-       User Objective Time :      25.3959
-       User Sensitivity Time :     3.4195
-       Interface Time :            0.2772
-       Opt Solver Time:            0.2292
+    Total Time:                   23.3541
+       User Objective Time :      20.1727
+       User Sensitivity Time :     2.7722
+       Interface Time :            0.2278
+       Opt Solver Time:            0.1815
     Calls to Objective Function :     233
     Calls to Sens Function :           54
 
