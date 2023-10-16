@@ -805,8 +805,8 @@ It finds the pitch profile for a single-stage-to-orbit launch vehicle that minim
 required to reach orbit insertion under constant thrust.</p>
 <p><img alt="The free-body-diagram of the single-stage-to-orbit problem." src="../../_images/ssto_fbd.png" /></p>
 <p>The vehicle dynamics are given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-95898ffc-2e8a-4d35-86df-b77aa6a30d30">
-<span class="eqno">(79)<a class="headerlink" href="#equation-95898ffc-2e8a-4d35-86df-b77aa6a30d30" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1bb409a8-b5a7-4102-9b6e-bc254472eeab">
+<span class="eqno">(79)<a class="headerlink" href="#equation-1bb409a8-b5a7-4102-9b6e-bc254472eeab" title="Permalink to this equation">#</a></span>\[\begin{align}
   \frac{dx}{dt} &amp;= v_x \\
   \frac{dy}{dt} &amp;= v_y \\
   \frac{dv_x}{dt} &amp;= \frac{1}{m} (T \cos \theta - D \cos \gamma) \\
@@ -814,8 +814,8 @@ required to reach orbit insertion under constant thrust.</p>
   \frac{dm}{dt} &amp;= \frac{T}{g I_{sp}}
 \end{align}\]</div>
 <p>The initial conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0ceb14be-7bc6-4431-9749-d033278616af">
-<span class="eqno">(80)<a class="headerlink" href="#equation-0ceb14be-7bc6-4431-9749-d033278616af" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3c42e093-511a-4dcc-98a2-d895a58b217b">
+<span class="eqno">(80)<a class="headerlink" href="#equation-3c42e093-511a-4dcc-98a2-d895a58b217b" title="Permalink to this equation">#</a></span>\[\begin{align}
   x_0 &amp;= 0 \\
   y_0 &amp;= 0 \\
   v_{x0} &amp;= 0 \\
@@ -823,8 +823,8 @@ required to reach orbit insertion under constant thrust.</p>
   m_0 &amp;= 117000 \rm{\,kg}
 \end{align}\]</div>
 <p>and the final conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8b02b0af-e716-4b1e-bc41-f033c77d6149">
-<span class="eqno">(81)<a class="headerlink" href="#equation-8b02b0af-e716-4b1e-bc41-f033c77d6149" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5d40bae9-20ae-43c9-8a3f-955d7d6f774c">
+<span class="eqno">(81)<a class="headerlink" href="#equation-5d40bae9-20ae-43c9-8a3f-955d7d6f774c" title="Permalink to this equation">#</a></span>\[\begin{align}
   x_f &amp;= \rm{free} \\
   y_f &amp;= 185 \rm{\,km} \\
   v_{xf} &amp;= V_{circ} \\
@@ -1260,7 +1260,10 @@ f...............................................f.......................f.......
 ..................................................................f.......................f.......................f.......................f............................. 90  vydot
 ...................................................................f.......................f.......................f.......................f............................ 91  vydot
 ....................................................................f.......................f.......................f.......................f........................... 92  vydot
-.....................................................................f.......................f.......................f.......................f.......................... 93  vydot
+.....................................................................f.......................f.................
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>......f.......................f.......................... 93  vydot
 ......................................................................f.......................f.......................f.......................f......................... 94  vydot
 .......................................................................f.......................f.......................f.......................f........................ 95  vydot
 ........................................................................................................................f.......................f....................... 96  mdot
@@ -1268,7 +1271,10 @@ f...............................................f.......................f.......
 ..........................................................................................................................f.......................f..................... 98  mdot
 ...........................................................................................................................f.......................f.................... 99  mdot
 ............................................................................................................................f.......................f................... 100  mdot
-.............................................................................................................................f.......................f.................. 101  mdot
+..................................................................................................
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>...........................f.......................f.................. 101  mdot
 ..............................................................................................................................f.......................f................. 102  mdot
 ...............................................................................................................................f.......................f................ 103  mdot
 ................................................................................................................................f.......................f............... 104  mdot
@@ -1324,8 +1330,8 @@ FWD solves: 5   REV solves: 0
 Total colors vs. total size: 5 vs 168  (97.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.034380 sec.
-Time to compute coloring: 0.018601 sec.
+Time to compute sparsity: 0.040841 sec.
+Time to compute coloring: 0.022210 sec.
 Memory to compute coloring: 0.125000 MB.
 </pre></div>
 </div>
@@ -1415,12 +1421,12 @@ FWD solves: 5   REV solves: 0
 Total colors vs. total size: 5 vs 84  (94.0% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.020264 sec.
-Time to compute coloring: 0.010226 sec.
+Time to compute sparsity: 0.019575 sec.
+Time to compute coloring: 0.011668 sec.
 Memory to compute coloring: 0.000000 MB.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.316994 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.378128 seconds.
 Total jacobian shape: (74, 152) 
 </pre></div>
 </div>
@@ -1429,8 +1435,8 @@ FWD solves: 12   REV solves: 0
 Total colors vs. total size: 12 vs 152  (92.1% improvement)
 
 Sparsity computed using tolerance: 1e-12
-Time to compute sparsity: 0.316994 sec.
-Time to compute coloring: 0.078858 sec.
+Time to compute sparsity: 0.378128 sec.
+Time to compute coloring: 0.093148 sec.
 Memory to compute coloring: 0.125000 MB.
 </pre></div>
 </div>
@@ -1440,11 +1446,11 @@ Memory to compute coloring: 0.125000 MB.
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    1.8477
-       User Objective Time :       0.1035
-       User Sensitivity Time :     0.9081
-       Interface Time :            0.2015
-       Opt Solver Time:            0.6346
+    Total Time:                    2.2385
+       User Objective Time :       0.1229
+       User Sensitivity Time :     1.1065
+       Interface Time :            0.2433
+       Opt Solver Time:            0.7657
     Calls to Objective Function :      51
     Calls to Sens Function :           48
 
@@ -1836,7 +1842,7 @@ Model viewer data has already been recorded for Driver.
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id2">
 <div class="citation" id="id26" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>LGuzmanP14<span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">LGuzmanP14</a><span class="fn-bracket">]</span></span>
 <p>James M Longuski, José J Guzmán, and John E Prussing. <em>Optimal control with aerospace applications</em>. Springer, 1 edition, 2014. ISBN 978-1-4939-4917-5. <a class="reference external" href="https://doi.org/https://doi.org/10.1007/978-1-4614-8945-0">doi:https://doi.org/10.1007/978-1-4614-8945-0</a>.</p>
 </div>
 </div>

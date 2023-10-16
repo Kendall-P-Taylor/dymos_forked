@@ -831,16 +831,16 @@ Friction force is ignored to simplify the problem.</p>
 <section id="trajectory-optimization-problem">
 <h2>Trajectory Optimization Problem<a class="headerlink" href="#trajectory-optimization-problem" title="Permalink to this heading">#</a></h2>
 <p>We use the following quadratic objective function to approximately minimize the total control effort:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5f9aecf2-ace7-4263-a900-90916ba61697">
-<span class="eqno">(86)<a class="headerlink" href="#equation-5f9aecf2-ace7-4263-a900-90916ba61697" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-623672e3-434f-4e44-b63a-670650414916">
+<span class="eqno">(86)<a class="headerlink" href="#equation-623672e3-434f-4e44-b63a-670650414916" title="Permalink to this equation">#</a></span>\[\begin{equation}
     J = \int_{t_0}^{t_f} F(t)^2 dt ~~ \rightarrow ~ \min
 \end{equation}\]</div>
 <p>where <span class="math notranslate nohighlight">\(F(t)\)</span> is the external force, <span class="math notranslate nohighlight">\(t_0\)</span> is the initial time, and <span class="math notranslate nohighlight">\(t_f\)</span> is the final time.</p>
 <section id="dynamics">
 <h3>Dynamics<a class="headerlink" href="#dynamics" title="Permalink to this heading">#</a></h3>
 <p>The equations of motion of the cart-pole system are given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df36f470-11c8-4d36-abe4-877cb102fb23">
-<span class="eqno">(87)<a class="headerlink" href="#equation-df36f470-11c8-4d36-abe4-877cb102fb23" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d48315d9-eb9d-4370-911d-48a6b787947f">
+<span class="eqno">(87)<a class="headerlink" href="#equation-d48315d9-eb9d-4370-911d-48a6b787947f" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \begin{bmatrix}
         \ddot{x} \\ \ddot{\theta}
     \end{bmatrix} =
@@ -857,13 +857,13 @@ Friction force is ignored to simplify the problem.</p>
 To do so, we define our state vector to be <span class="math notranslate nohighlight">\(X = [x, \dot{x}, \theta, \dot{\theta}]^T\)</span>.
 We also add an “energy” state <span class="math notranslate nohighlight">\(e\)</span> and set <span class="math notranslate nohighlight">\(\dot{e} = F^2\)</span> to keep track of the accumulated control input.
 By setting setting <span class="math notranslate nohighlight">\(e_0 = 0\)</span>, the objective function is equal to the final value of the state <span class="math notranslate nohighlight">\(e\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6c5c0cf0-de2b-4f50-8ff5-ddb7addc49d4">
-<span class="eqno">(88)<a class="headerlink" href="#equation-6c5c0cf0-de2b-4f50-8ff5-ddb7addc49d4" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-9fca4217-48ec-4842-8d87-2f37641d62f4">
+<span class="eqno">(88)<a class="headerlink" href="#equation-9fca4217-48ec-4842-8d87-2f37641d62f4" title="Permalink to this equation">#</a></span>\[\begin{equation}
     J = \int_{t_0}^{t_f} \dot{e} ~dt = e_f
 \end{equation}\]</div>
 <p>To summarize, the ODE for the cart-pole system is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-246ab979-dbd4-449d-a017-1dfebb80cbae">
-<span class="eqno">(89)<a class="headerlink" href="#equation-246ab979-dbd4-449d-a017-1dfebb80cbae" title="Permalink to this equation">#</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-d627cb34-3b04-4430-957c-3176a86297aa">
+<span class="eqno">(89)<a class="headerlink" href="#equation-d627cb34-3b04-4430-957c-3176a86297aa" title="Permalink to this equation">#</a></span>\[\begin{equation}
     \begin{bmatrix}
         \dot{x} \\ \dot{\theta} \\ \ddot{x} \\ \ddot{\theta} \\ \dot{e} 
     \end{bmatrix} =
@@ -884,8 +884,8 @@ By setting setting <span class="math notranslate nohighlight">\(e_0 = 0\)</span>
 <section id="initial-and-terminal-conditions">
 <h3>Initial and terminal conditions<a class="headerlink" href="#initial-and-terminal-conditions" title="Permalink to this heading">#</a></h3>
 <p>The initial state variables are all zero at <span class="math notranslate nohighlight">\(t_0 = 0\)</span>, and the final conditions at time <span class="math notranslate nohighlight">\(t_f\)</span> are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c33572e6-300a-458b-a8a5-bd04f653a063">
-<span class="eqno">(90)<a class="headerlink" href="#equation-c33572e6-300a-458b-a8a5-bd04f653a063" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d055fa23-86d7-49d3-b59c-8c462f71a15a">
+<span class="eqno">(90)<a class="headerlink" href="#equation-d055fa23-86d7-49d3-b59c-8c462f71a15a" title="Permalink to this equation">#</a></span>\[\begin{align}
     x_f &amp;= d \\
     \dot{x}_f &amp;= 0 \\
     \theta_f &amp;= \pi \\
@@ -1193,7 +1193,7 @@ First, we instantiate the OpenMDAO problem and set up the Dymos trajectory, phas
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;dymos.phase.phase.Phase at 0x7f34641b9fc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;dymos.phase.phase.Phase at 0x7fe1102db520&gt;
 </pre></div>
 </div>
 </div>
@@ -1276,7 +1276,7 @@ We then call the <code class="docutils literal notranslate"><span class="pre">se
         [final]   0.0000e+00 == f [N]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;openmdao.core.problem.Problem at 0x7f3478748a00&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;openmdao.core.problem.Problem at 0x7fe124452770&gt;
 </pre></div>
 </div>
 </div>
@@ -1302,12 +1302,10 @@ We then call the <code class="docutils literal notranslate"><span class="pre">se
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model viewer data has already been recorded for Driver.
+Model viewer data has already been recorded for Driver.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model viewer data has already been recorded for Driver.
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.805385 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.952173 seconds.
 Total jacobian shape: (206, 281) 
 
 
@@ -1316,8 +1314,8 @@ FWD solves: 10   REV solves: 0
 Total colors vs. total size: 10 vs 281  (96.4% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.805385 sec.
-Time to compute coloring: 0.139861 sec.
+Time to compute sparsity: 0.952173 sec.
+Time to compute coloring: 0.164915 sec.
 Memory to compute coloring: 0.250000 MB.
 </pre></div>
 </div>
@@ -1386,7 +1384,7 @@ Model viewer data has already been recorded for Driver.
 <h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
 <div class="docutils container" id="id2">
 <div class="citation" id="id53" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>Kel17<span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">Kel17</a><span class="fn-bracket">]</span></span>
 <p>Matthew Kelly. An introduction to trajectory optimization: How to do your own direct collocation. <em>SIAM Review</em>, 59(4):849–904, 2017. <a class="reference external" href="https://doi.org/10.1137/16M1062569">doi:10.1137/16M1062569</a>.</p>
 </div>
 </div>
