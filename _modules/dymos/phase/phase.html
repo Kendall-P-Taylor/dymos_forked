@@ -697,7 +697,7 @@ title="Open an issue"
             <article class="bd-article" role="main">
               
   <h1>Source code for dymos.phase.phase</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Callable</span>
+<span></span><span class="kn">from</span> <span class="nn">collections.abc</span> <span class="kn">import</span> <span class="n">Iterable</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Sequence</span>
 <span class="kn">import</span> <span class="nn">inspect</span>
 <span class="kn">import</span> <span class="nn">warnings</span>
 
@@ -2170,7 +2170,11 @@ title="Open an issue"
 <span class="sd">        rate : bool</span>
 <span class="sd">            If True, add the rate of change of the named variable to the timeseries outputs of the</span>
 <span class="sd">            phase.  The rate variable will be named f&#39;{name}_rate&#39;.  Defaults to False.</span>
-<span class="sd">        expr :</span>
+<span class="sd">        expr : bool</span>
+<span class="sd">            True if the given name is an expression for an ExecComp.</span>
+<span class="sd">        expr_kwargs : dict</span>
+<span class="sd">            Keyword arguments for the expression.</span>
+
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
