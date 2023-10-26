@@ -1189,8 +1189,8 @@ preferable when using a differential inclusion approach to problems.</p>
 <p><em>TrueAirspeedComp</em> uses the Mach number, provided as a
 control, and the speed of sound from the atmosphere model to compute the
 true airspeed of the aircraft.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1410f325-2c6f-4910-86b0-cde317650e0e">
-<span class="eqno">(33)<a class="headerlink" href="#equation-1410f325-2c6f-4910-86b0-cde317650e0e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-91e91d30-0653-456c-803c-c92dcae03a4e">
+<span class="eqno">(33)<a class="headerlink" href="#equation-91e91d30-0653-456c-803c-c92dcae03a4e" title="Permalink to this equation">#</a></span>\[\begin{align}
   TAS &amp;= mach \cdot sos
 \end{align}\]</div>
 <table class="table">
@@ -1221,8 +1221,8 @@ true airspeed of the aircraft.</p>
 <p><em>SteadyFlightPathAngleComp</em> uses the true airspeed and the
 climb rate, obtained by differentiating the altitude time history at the
 nodes, to compute the flight path angle.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-15005cfc-5015-4d39-a7b1-145497972189">
-<span class="eqno">(34)<a class="headerlink" href="#equation-15005cfc-5015-4d39-a7b1-145497972189" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1129d045-50f1-451c-80fd-0ea2b4fd7a65">
+<span class="eqno">(34)<a class="headerlink" href="#equation-1129d045-50f1-451c-80fd-0ea2b4fd7a65" title="Permalink to this equation">#</a></span>\[\begin{align}
   \gamma &amp;= \arcsin \frac{\dot h}{TAS}
 \end{align}\]</div>
 <table class="table">
@@ -1253,8 +1253,8 @@ nodes, to compute the flight path angle.</p>
 <p><em>RangeRateComp</em> uses the true airspeed and the flight path
 angle to determine the velocity projected along the ground. This is the
 derivative of the state variable <em>range</em>.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6b60ed16-4a70-4c40-8a9a-534673de572b">
-<span class="eqno">(35)<a class="headerlink" href="#equation-6b60ed16-4a70-4c40-8a9a-534673de572b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bbd72f97-d6a3-48a8-9064-68464ab081fb">
+<span class="eqno">(35)<a class="headerlink" href="#equation-bbd72f97-d6a3-48a8-9064-68464ab081fb" title="Permalink to this equation">#</a></span>\[\begin{align}
   \dot{range} &amp;= TAS \cos \gamma
 \end{align}\]</div>
 <table class="table">
@@ -1286,8 +1286,8 @@ derivative of the state variable <em>range</em>.</p>
 <code class="docutils literal notranslate"><span class="pre">mass_comp.py</span></code> computes the aircraft total mass based on
 its empty mass, payload mass, and current fuel mass. It also computes
 total weight which simplifies some equations later on.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c14acea4-d153-4b0f-bc98-1b06b3e8471c">
-<span class="eqno">(36)<a class="headerlink" href="#equation-c14acea4-d153-4b0f-bc98-1b06b3e8471c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b327132f-d703-4e4b-834b-e92b646533c3">
+<span class="eqno">(36)<a class="headerlink" href="#equation-b327132f-d703-4e4b-834b-e92b646533c3" title="Permalink to this equation">#</a></span>\[\begin{align}
   mass_{total} &amp;= mass_{empty} + mass_{payload} + mass_{fuel} \\
   W_{total} &amp;= 9.80665 \, mass_{total}
 \end{align}\]</div>
@@ -1326,8 +1326,8 @@ total weight which simplifies some equations later on.</p>
 <h3>Dynamic Pressure<a class="headerlink" href="#dynamic-pressure" title="Permalink to this heading">#</a></h3>
 <p>The <em>DynamicPressureComp</em> computes the dynamic pressure from
 true airspeed and atmospheric density.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a74fb757-3ad7-4a9e-b3c3-6c6efe672211">
-<span class="eqno">(37)<a class="headerlink" href="#equation-a74fb757-3ad7-4a9e-b3c3-6c6efe672211" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dafa74a1-514c-49eb-8efa-d30ae04d1aa2">
+<span class="eqno">(37)<a class="headerlink" href="#equation-dafa74a1-514c-49eb-8efa-d30ae04d1aa2" title="Permalink to this equation">#</a></span>\[\begin{align}
   q &amp;= \frac{1}{2} \rho TAS^2
 \end{align}\]</div>
 <table class="table">
@@ -1435,14 +1435,14 @@ profile being modeled is so benign that assuming steady flight at
 discrete points (nodes) in the trajectory is not terribly inaccurate.</p>
 <p>The thrust necessary for steady flight is computed by balancing the drag
 equation</p>
-<div class="amsmath math notranslate nohighlight" id="equation-80210af2-a3de-483b-9678-9d56cfafcbff">
-<span class="eqno">(38)<a class="headerlink" href="#equation-80210af2-a3de-483b-9678-9d56cfafcbff" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-8961bbeb-121c-478f-b346-451017396858">
+<span class="eqno">(38)<a class="headerlink" href="#equation-8961bbeb-121c-478f-b346-451017396858" title="Permalink to this equation">#</a></span>\[\begin{align}
   C_T &amp;= W_{total} \frac{sin \gamma}{q \cdot S \cdot \cos \alpha} + \frac{C_D}{\cos \alpha}
 \end{align}\]</div>
 <p>The lift coefficient required for steady flight is found by balancing
 lift and weight:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4503ce4e-bbfa-4594-853c-20c71a1ea822">
-<span class="eqno">(39)<a class="headerlink" href="#equation-4503ce4e-bbfa-4594-853c-20c71a1ea822" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3e21cf34-24c7-4dd9-8d4a-4c036fa57387">
+<span class="eqno">(39)<a class="headerlink" href="#equation-3e21cf34-24c7-4dd9-8d4a-4c036fa57387" title="Permalink to this equation">#</a></span>\[\begin{align}
   \tilde{C_L} &amp;= W_{total} \frac{cos \gamma}{q \cdot S} - C_T \sin \alpha
 \end{align}\]</div>
 <p>Using coefficients in the balance equations is better scaled from a numerical standpoint.</p>
@@ -1454,30 +1454,30 @@ rate of fuel burn. In addition, by normalizing thrust at any point by
 the maximum possible thrust, we obtain the throttle parameter <span class="math notranslate nohighlight">\(\tau\)</span>.
 The propulsion group uses a number of components to perform these
 calculations.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-265ca6d1-5692-4281-863a-a9480c5d2cd4">
-<span class="eqno">(40)<a class="headerlink" href="#equation-265ca6d1-5692-4281-863a-a9480c5d2cd4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4b0d5c99-d02b-42ff-beb7-2e7ed4ef3c02">
+<span class="eqno">(40)<a class="headerlink" href="#equation-4b0d5c99-d02b-42ff-beb7-2e7ed4ef3c02" title="Permalink to this equation">#</a></span>\[\begin{align}
   T &amp;= C_T \cdot q \cdot S
 \end{align}\]</div>
 <p>Maximum thrust is computed by multiplying sea-level thrust by the ratio
 of pressure to sea-level atmospheric pressure.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-27d479c3-fe4a-4f5b-8178-8bdbdcf4969f">
-<span class="eqno">(41)<a class="headerlink" href="#equation-27d479c3-fe4a-4f5b-8178-8bdbdcf4969f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-88275cce-832a-4f85-8036-51286a920dab">
+<span class="eqno">(41)<a class="headerlink" href="#equation-88275cce-832a-4f85-8036-51286a920dab" title="Permalink to this equation">#</a></span>\[\begin{align}
   T_{max} &amp;= T_{max,sl} \frac{P}{P_{sl}}
 \end{align}\]</div>
 <p>The throttle parameter is then the ratio current thrust to maximum
 possible thrust.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76151f9b-47e3-4f15-80ef-8bd993681e09">
-<span class="eqno">(42)<a class="headerlink" href="#equation-76151f9b-47e3-4f15-80ef-8bd993681e09" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d5056173-38c1-4458-a3e0-7c91e2e61c53">
+<span class="eqno">(42)<a class="headerlink" href="#equation-d5056173-38c1-4458-a3e0-7c91e2e61c53" title="Permalink to this equation">#</a></span>\[\begin{align}
   \tau &amp;= \frac{T}{T_{max}}
 \end{align}\]</div>
 <p>The thrust specific fuel consumption is computed as follows:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d45bcb66-8e34-48fa-a686-55605ef272b2">
-<span class="eqno">(43)<a class="headerlink" href="#equation-d45bcb66-8e34-48fa-a686-55605ef272b2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c22b8845-e83a-4fb2-9607-2abb631c855e">
+<span class="eqno">(43)<a class="headerlink" href="#equation-c22b8845-e83a-4fb2-9607-2abb631c855e" title="Permalink to this equation">#</a></span>\[\begin{align}
   TSFC &amp;= TSFC_{sl} - 1.5 E - 10 \cdot 9.80665 \cdot alt
 \end{align}\]</div>
 <p>Finally, fuel burn rate is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e6b646e5-87c7-4739-926e-5de20e4499a5">
-<span class="eqno">(44)<a class="headerlink" href="#equation-e6b646e5-87c7-4739-926e-5de20e4499a5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dde51702-430a-48ac-ab4b-ee4fb226d8c4">
+<span class="eqno">(44)<a class="headerlink" href="#equation-dde51702-430a-48ac-ab4b-ee4fb226d8c4" title="Permalink to this equation">#</a></span>\[\begin{align}
   \dot{mass_{fuel}} &amp;= -TSFC \frac{T}{9.80665}
 \end{align}\]</div>
 </section>
@@ -1792,7 +1792,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         [path]    1.0000e-02 &lt;= propulsion.tau &lt;= 2.0000e+00  [None]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;openmdao.core.problem.Problem at 0x7f44b4185750&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;openmdao.core.problem.Problem at 0x7f2ebb5add80&gt;
 </pre></div>
 </div>
 </div>
@@ -1832,18 +1832,19 @@ Plots of the resulting solution and simulation will be generated.</p>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model viewer data has already been recorded for Driver.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.842948 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 1.143474 seconds.
 Total jacobian shape: (224, 221) 
 
 
-Jacobian shape: (224, 221)  ( 2.90% nonzero)
+Jacobian shape: (224, 221)  (2.90% nonzero)
 FWD solves: 12   REV solves: 0
-Total colors vs. total size: 12 vs 221  (94.6% improvement)
+Total colors vs. total size: 12 vs 221  (94.57% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity: 0.842948 sec.
-Time to compute coloring: 0.162801 sec.
-Memory to compute coloring: 0.125000 MB.
+Time to compute sparsity:   1.1435 sec
+Time to compute coloring:   0.1978 sec
+Memory to compute coloring:   0.1250 MB
+Coloring created on: 2023-10-26 23:41:21
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization Problem -- Optimization using pyOpt_sparse
@@ -1852,11 +1853,11 @@ Memory to compute coloring: 0.125000 MB.
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                   26.5509
-       User Objective Time :      23.8160
-       User Sensitivity Time :     2.2599
-       Interface Time :            0.2209
-       Opt Solver Time:            0.2542
+    Total Time:                   31.1626
+       User Objective Time :      27.7660
+       User Sensitivity Time :     2.7890
+       Interface Time :            0.2657
+       Opt Solver Time:            0.3419
     Calls to Objective Function :      36
     Calls to Sens Function :           36
 
@@ -1866,228 +1867,228 @@ Memory to compute coloring: 0.125000 MB.
           0  traj.phases.phase0.indep_states.states:range    -7.260052E+02
 
    Variables (c - continuous, i - integer, d - discrete)
-      Index  Name                                                                     Type      Lower Bound            Value      Upper Bound     Status
-          0  traj.phase0.t_duration_0                                                    c     3.000000E-01     5.637564E+00     1.000000E+01           
-          1  traj.phases.phase0.indep_states.states:range_0                              c     0.000000E+00     4.300778E+03     2.000000E+06           
-          2  traj.phases.phase0.indep_states.states:range_1                              c     0.000000E+00     1.019478E+04     2.000000E+06           
-          3  traj.phases.phase0.indep_states.states:range_2                              c     0.000000E+00     1.205044E+04     2.000000E+06           
-          4  traj.phases.phase0.indep_states.states:range_3                              c     0.000000E+00     1.205044E+04     2.000000E+06           
-          5  traj.phases.phase0.indep_states.states:range_4                              c     0.000000E+00     2.179716E+04     2.000000E+06           
-          6  traj.phases.phase0.indep_states.states:range_5                              c     0.000000E+00     3.502521E+04     2.000000E+06           
-          7  traj.phases.phase0.indep_states.states:range_6                              c     0.000000E+00     3.915789E+04     2.000000E+06           
-          8  traj.phases.phase0.indep_states.states:range_7                              c     0.000000E+00     3.915789E+04     2.000000E+06           
-          9  traj.phases.phase0.indep_states.states:range_8                              c     0.000000E+00     5.336791E+04     2.000000E+06           
-         10  traj.phases.phase0.indep_states.states:range_9                              c     0.000000E+00     7.250027E+04     2.000000E+06           
-         11  traj.phases.phase0.indep_states.states:range_10                             c     0.000000E+00     7.845561E+04     2.000000E+06           
-         12  traj.phases.phase0.indep_states.states:range_11                             c     0.000000E+00     7.845561E+04     2.000000E+06           
-         13  traj.phases.phase0.indep_states.states:range_12                             c     0.000000E+00     9.625935E+04     2.000000E+06           
-         14  traj.phases.phase0.indep_states.states:range_13                             c     0.000000E+00     1.208337E+05     2.000000E+06           
-         15  traj.phases.phase0.indep_states.states:range_14                             c     0.000000E+00     1.286109E+05     2.000000E+06           
-         16  traj.phases.phase0.indep_states.states:range_15                             c     0.000000E+00     1.286109E+05     2.000000E+06           
-         17  traj.phases.phase0.indep_states.states:range_16                             c     0.000000E+00     1.498279E+05     2.000000E+06           
-         18  traj.phases.phase0.indep_states.states:range_17                             c     0.000000E+00     1.791031E+05     2.000000E+06           
-         19  traj.phases.phase0.indep_states.states:range_18                             c     0.000000E+00     1.883686E+05     2.000000E+06           
-         20  traj.phases.phase0.indep_states.states:range_19                             c     0.000000E+00     1.883686E+05     2.000000E+06           
-         21  traj.phases.phase0.indep_states.states:range_20                             c     0.000000E+00     2.121241E+05     2.000000E+06           
-         22  traj.phases.phase0.indep_states.states:range_21                             c     0.000000E+00     2.449018E+05     2.000000E+06           
-         23  traj.phases.phase0.indep_states.states:range_22                             c     0.000000E+00     2.552758E+05     2.000000E+06           
-         24  traj.phases.phase0.indep_states.states:range_23                             c     0.000000E+00     2.552758E+05     2.000000E+06           
-         25  traj.phases.phase0.indep_states.states:range_24                             c     0.000000E+00     2.805971E+05     2.000000E+06           
-         26  traj.phases.phase0.indep_states.states:range_25                             c     0.000000E+00     3.155354E+05     2.000000E+06           
-         27  traj.phases.phase0.indep_states.states:range_26                             c     0.000000E+00     3.265932E+05     2.000000E+06           
-         28  traj.phases.phase0.indep_states.states:range_27                             c     0.000000E+00     3.265932E+05     2.000000E+06           
-         29  traj.phases.phase0.indep_states.states:range_28                             c     0.000000E+00     3.524437E+05     2.000000E+06           
-         30  traj.phases.phase0.indep_states.states:range_29                             c     0.000000E+00     3.881121E+05     2.000000E+06           
-         31  traj.phases.phase0.indep_states.states:range_30                             c     0.000000E+00     3.994010E+05     2.000000E+06           
-         32  traj.phases.phase0.indep_states.states:range_31                             c     0.000000E+00     3.994010E+05     2.000000E+06           
-         33  traj.phases.phase0.indep_states.states:range_32                             c     0.000000E+00     4.247223E+05     2.000000E+06           
-         34  traj.phases.phase0.indep_states.states:range_33                             c     0.000000E+00     4.596605E+05     2.000000E+06           
-         35  traj.phases.phase0.indep_states.states:range_34                             c     0.000000E+00     4.707183E+05     2.000000E+06           
-         36  traj.phases.phase0.indep_states.states:range_35                             c     0.000000E+00     4.707183E+05     2.000000E+06           
-         37  traj.phases.phase0.indep_states.states:range_36                             c     0.000000E+00     4.944738E+05     2.000000E+06           
-         38  traj.phases.phase0.indep_states.states:range_37                             c     0.000000E+00     5.272515E+05     2.000000E+06           
-         39  traj.phases.phase0.indep_states.states:range_38                             c     0.000000E+00     5.376255E+05     2.000000E+06           
-         40  traj.phases.phase0.indep_states.states:range_39                             c     0.000000E+00     5.376255E+05     2.000000E+06           
-         41  traj.phases.phase0.indep_states.states:range_40                             c     0.000000E+00     5.588425E+05     2.000000E+06           
-         42  traj.phases.phase0.indep_states.states:range_41                             c     0.000000E+00     5.881176E+05     2.000000E+06           
-         43  traj.phases.phase0.indep_states.states:range_42                             c     0.000000E+00     5.973831E+05     2.000000E+06           
-         44  traj.phases.phase0.indep_states.states:range_43                             c     0.000000E+00     5.973831E+05     2.000000E+06           
-         45  traj.phases.phase0.indep_states.states:range_44                             c     0.000000E+00     6.151931E+05     2.000000E+06           
-         46  traj.phases.phase0.indep_states.states:range_45                             c     0.000000E+00     6.397625E+05     2.000000E+06           
-         47  traj.phases.phase0.indep_states.states:range_46                             c     0.000000E+00     6.475361E+05     2.000000E+06           
-         48  traj.phases.phase0.indep_states.states:range_47                             c     0.000000E+00     6.475361E+05     2.000000E+06           
-         49  traj.phases.phase0.indep_states.states:range_48                             c     0.000000E+00     6.612680E+05     2.000000E+06           
-         50  traj.phases.phase0.indep_states.states:range_49                             c     0.000000E+00     6.805947E+05     2.000000E+06           
-         51  traj.phases.phase0.indep_states.states:range_50                             c     0.000000E+00     6.868473E+05     2.000000E+06           
-         52  traj.phases.phase0.indep_states.states:range_51                             c     0.000000E+00     6.868473E+05     2.000000E+06           
-         53  traj.phases.phase0.indep_states.states:range_52                             c     0.000000E+00     6.963491E+05     2.000000E+06           
-         54  traj.phases.phase0.indep_states.states:range_53                             c     0.000000E+00     7.096820E+05     2.000000E+06           
-         55  traj.phases.phase0.indep_states.states:range_54                             c     0.000000E+00     7.139547E+05     2.000000E+06           
-         56  traj.phases.phase0.indep_states.states:range_55                             c     0.000000E+00     7.139547E+05     2.000000E+06           
-         57  traj.phases.phase0.indep_states.states:range_56                             c     0.000000E+00     7.182109E+05     2.000000E+06           
-         58  traj.phases.phase0.indep_states.states:range_57                             c     0.000000E+00     7.241240E+05     2.000000E+06           
-         59  traj.phases.phase0.indep_states.states:range_58                             c     0.000000E+00     7.260052E+05     2.000000E+06           
-         60  traj.phases.phase0.indep_states.states:mass_fuel_0                          c     0.000000E+00     2.957208E+02     1.500000E+03           
-         61  traj.phases.phase0.indep_states.states:mass_fuel_1                          c     0.000000E+00     2.900371E+02     1.500000E+03           
-         62  traj.phases.phase0.indep_states.states:mass_fuel_2                          c     0.000000E+00     2.882890E+02     1.500000E+03           
-         63  traj.phases.phase0.indep_states.states:mass_fuel_3                          c     0.000000E+00     2.882890E+02     1.500000E+03           
-         64  traj.phases.phase0.indep_states.states:mass_fuel_4                          c     0.000000E+00     2.794117E+02     1.500000E+03           
-         65  traj.phases.phase0.indep_states.states:mass_fuel_5                          c     0.000000E+00     2.680940E+02     1.500000E+03           
-         66  traj.phases.phase0.indep_states.states:mass_fuel_6                          c     0.000000E+00     2.647067E+02     1.500000E+03           
-         67  traj.phases.phase0.indep_states.states:mass_fuel_7                          c     0.000000E+00     2.647067E+02     1.500000E+03           
-         68  traj.phases.phase0.indep_states.states:mass_fuel_8                          c     0.000000E+00     2.535688E+02     1.500000E+03           
-         69  traj.phases.phase0.indep_states.states:mass_fuel_9                          c     0.000000E+00     2.401846E+02     1.500000E+03           
-         70  traj.phases.phase0.indep_states.states:mass_fuel_10                         c     0.000000E+00     2.364961E+02     1.500000E+03           
-         71  traj.phases.phase0.indep_states.states:mass_fuel_11                         c     0.000000E+00     2.364961E+02     1.500000E+03           
-         72  traj.phases.phase0.indep_states.states:mass_fuel_12                         c     0.000000E+00     2.271299E+02     1.500000E+03           
-         73  traj.phases.phase0.indep_states.states:mass_fuel_13                         c     0.000000E+00     2.167573E+02     1.500000E+03           
-         74  traj.phases.phase0.indep_states.states:mass_fuel_14                         c     0.000000E+00     2.137292E+02     1.500000E+03           
-         75  traj.phases.phase0.indep_states.states:mass_fuel_15                         c     0.000000E+00     2.137292E+02     1.500000E+03           
-         76  traj.phases.phase0.indep_states.states:mass_fuel_16                         c     0.000000E+00     2.055422E+02     1.500000E+03           
-         77  traj.phases.phase0.indep_states.states:mass_fuel_17                         c     0.000000E+00     1.942336E+02     1.500000E+03           
-         78  traj.phases.phase0.indep_states.states:mass_fuel_18                         c     0.000000E+00     1.906363E+02     1.500000E+03           
-         79  traj.phases.phase0.indep_states.states:mass_fuel_19                         c     0.000000E+00     1.906363E+02     1.500000E+03           
-         80  traj.phases.phase0.indep_states.states:mass_fuel_20                         c     0.000000E+00     1.813581E+02     1.500000E+03           
-         81  traj.phases.phase0.indep_states.states:mass_fuel_21                         c     0.000000E+00     1.684992E+02     1.500000E+03           
-         82  traj.phases.phase0.indep_states.states:mass_fuel_22                         c     0.000000E+00     1.644355E+02     1.500000E+03           
-         83  traj.phases.phase0.indep_states.states:mass_fuel_23                         c     0.000000E+00     1.644355E+02     1.500000E+03           
-         84  traj.phases.phase0.indep_states.states:mass_fuel_24                         c     0.000000E+00     1.545567E+02     1.500000E+03           
-         85  traj.phases.phase0.indep_states.states:mass_fuel_25                         c     0.000000E+00     1.410094E+02     1.500000E+03           
-         86  traj.phases.phase0.indep_states.states:mass_fuel_26                         c     0.000000E+00     1.367383E+02     1.500000E+03           
-         87  traj.phases.phase0.indep_states.states:mass_fuel_27                         c     0.000000E+00     1.367383E+02     1.500000E+03           
-         88  traj.phases.phase0.indep_states.states:mass_fuel_28                         c     0.000000E+00     1.267738E+02     1.500000E+03           
-         89  traj.phases.phase0.indep_states.states:mass_fuel_29                         c     0.000000E+00     1.130185E+02     1.500000E+03           
-         90  traj.phases.phase0.indep_states.states:mass_fuel_30                         c     0.000000E+00     1.086503E+02     1.500000E+03           
-         91  traj.phases.phase0.indep_states.states:mass_fuel_31                         c     0.000000E+00     1.086503E+02     1.500000E+03           
-         92  traj.phases.phase0.indep_states.states:mass_fuel_32                         c     0.000000E+00     9.882576E+01     1.500000E+03           
-         93  traj.phases.phase0.indep_states.states:mass_fuel_33                         c     0.000000E+00     8.534598E+01     1.500000E+03           
-         94  traj.phases.phase0.indep_states.states:mass_fuel_34                         c     0.000000E+00     8.113326E+01     1.500000E+03           
-         95  traj.phases.phase0.indep_states.states:mass_fuel_35                         c     0.000000E+00     8.113326E+01     1.500000E+03           
-         96  traj.phases.phase0.indep_states.states:mass_fuel_36                         c     0.000000E+00     7.218115E+01     1.500000E+03           
-         97  traj.phases.phase0.indep_states.states:mass_fuel_37                         c     0.000000E+00     5.977772E+01     1.500000E+03           
-         98  traj.phases.phase0.indep_states.states:mass_fuel_38                         c     0.000000E+00     5.576977E+01     1.500000E+03           
-         99  traj.phases.phase0.indep_states.states:mass_fuel_39                         c     0.000000E+00     5.576977E+01     1.500000E+03           
-        100  traj.phases.phase0.indep_states.states:mass_fuel_40                         c     0.000000E+00     4.741802E+01     1.500000E+03           
-        101  traj.phases.phase0.indep_states.states:mass_fuel_41                         c     0.000000E+00     3.592792E+01     1.500000E+03           
-        102  traj.phases.phase0.indep_states.states:mass_fuel_42                         c     0.000000E+00     3.239650E+01     1.500000E+03           
-        103  traj.phases.phase0.indep_states.states:mass_fuel_43                         c     0.000000E+00     3.239650E+01     1.500000E+03           
-        104  traj.phases.phase0.indep_states.states:mass_fuel_44                         c     0.000000E+00     2.595940E+01     1.500000E+03           
-        105  traj.phases.phase0.indep_states.states:mass_fuel_45                         c     0.000000E+00     1.877799E+01     1.500000E+03           
-        106  traj.phases.phase0.indep_states.states:mass_fuel_46                         c     0.000000E+00     1.714586E+01     1.500000E+03           
-        107  traj.phases.phase0.indep_states.states:mass_fuel_47                         c     0.000000E+00     1.714586E+01     1.500000E+03           
-        108  traj.phases.phase0.indep_states.states:mass_fuel_48                         c     0.000000E+00     1.500522E+01     1.500000E+03           
-        109  traj.phases.phase0.indep_states.states:mass_fuel_49                         c     0.000000E+00     1.243555E+01     1.500000E+03           
-        110  traj.phases.phase0.indep_states.states:mass_fuel_50                         c     0.000000E+00     1.141787E+01     1.500000E+03           
-        111  traj.phases.phase0.indep_states.states:mass_fuel_51                         c     0.000000E+00     1.141787E+01     1.500000E+03           
-        112  traj.phases.phase0.indep_states.states:mass_fuel_52                         c     0.000000E+00     9.500576E+00     1.500000E+03           
-        113  traj.phases.phase0.indep_states.states:mass_fuel_53                         c     0.000000E+00     5.938689E+00     1.500000E+03           
-        114  traj.phases.phase0.indep_states.states:mass_fuel_54                         c     0.000000E+00     4.560755E+00     1.500000E+03           
-        115  traj.phases.phase0.indep_states.states:mass_fuel_55                         c     0.000000E+00     4.560755E+00     1.500000E+03           
-        116  traj.phases.phase0.indep_states.states:mass_fuel_56                         c     0.000000E+00     3.066294E+00     1.500000E+03           
-        117  traj.phases.phase0.indep_states.states:mass_fuel_57                         c     0.000000E+00     7.801232E-01     1.500000E+03           
-        118  traj.phases.phase0.indep_states.states:alt_0                                c     0.000000E+00     1.152283E+04     6.000000E+04           
-        119  traj.phases.phase0.indep_states.states:alt_1                                c     0.000000E+00     1.362403E+04     6.000000E+04           
-        120  traj.phases.phase0.indep_states.states:alt_2                                c     0.000000E+00     1.428905E+04     6.000000E+04           
-        121  traj.phases.phase0.indep_states.states:alt_3                                c     0.000000E+00     1.428905E+04     6.000000E+04           
-        122  traj.phases.phase0.indep_states.states:alt_4                                c     0.000000E+00     1.781028E+04     6.000000E+04           
-        123  traj.phases.phase0.indep_states.states:alt_5                                c     0.000000E+00     2.266886E+04     6.000000E+04           
-        124  traj.phases.phase0.indep_states.states:alt_6                                c     0.000000E+00     2.420659E+04     6.000000E+04           
-        125  traj.phases.phase0.indep_states.states:alt_7                                c     0.000000E+00     2.420659E+04     6.000000E+04           
-        126  traj.phases.phase0.indep_states.states:alt_8                                c     0.000000E+00     2.947162E+04     6.000000E+04           
-        127  traj.phases.phase0.indep_states.states:alt_9                                c     0.000000E+00     3.563844E+04     6.000000E+04           
-        128  traj.phases.phase0.indep_states.states:alt_10                               c     0.000000E+00     3.710398E+04     6.000000E+04           
-        129  traj.phases.phase0.indep_states.states:alt_11                               c     0.000000E+00     3.710398E+04     6.000000E+04           
-        130  traj.phases.phase0.indep_states.states:alt_12                               c     0.000000E+00     3.977282E+04     6.000000E+04           
-        131  traj.phases.phase0.indep_states.states:alt_13                               c     0.000000E+00     4.064817E+04     6.000000E+04           
-        132  traj.phases.phase0.indep_states.states:alt_14                               c     0.000000E+00     4.061937E+04     6.000000E+04           
-        133  traj.phases.phase0.indep_states.states:alt_15                               c     0.000000E+00     4.061937E+04     6.000000E+04           
-        134  traj.phases.phase0.indep_states.states:alt_16                               c     0.000000E+00     4.049115E+04     6.000000E+04           
-        135  traj.phases.phase0.indep_states.states:alt_17                               c     0.000000E+00     4.035335E+04     6.000000E+04           
-        136  traj.phases.phase0.indep_states.states:alt_18                               c     0.000000E+00     4.033652E+04     6.000000E+04           
-        137  traj.phases.phase0.indep_states.states:alt_19                               c     0.000000E+00     4.033652E+04     6.000000E+04           
-        138  traj.phases.phase0.indep_states.states:alt_20                               c     0.000000E+00     4.037082E+04     6.000000E+04           
-        139  traj.phases.phase0.indep_states.states:alt_21                               c     0.000000E+00     4.051554E+04     6.000000E+04           
-        140  traj.phases.phase0.indep_states.states:alt_22                               c     0.000000E+00     4.056201E+04     6.000000E+04           
-        141  traj.phases.phase0.indep_states.states:alt_23                               c     0.000000E+00     4.056201E+04     6.000000E+04           
-        142  traj.phases.phase0.indep_states.states:alt_24                               c     0.000000E+00     4.064375E+04     6.000000E+04           
-        143  traj.phases.phase0.indep_states.states:alt_25                               c     0.000000E+00     4.069400E+04     6.000000E+04           
-        144  traj.phases.phase0.indep_states.states:alt_26                               c     0.000000E+00     4.069891E+04     6.000000E+04           
-        145  traj.phases.phase0.indep_states.states:alt_27                               c     0.000000E+00     4.069891E+04     6.000000E+04           
-        146  traj.phases.phase0.indep_states.states:alt_28                               c     0.000000E+00     4.070254E+04     6.000000E+04           
-        147  traj.phases.phase0.indep_states.states:alt_29                               c     0.000000E+00     4.075183E+04     6.000000E+04           
-        148  traj.phases.phase0.indep_states.states:alt_30                               c     0.000000E+00     4.079374E+04     6.000000E+04           
-        149  traj.phases.phase0.indep_states.states:alt_31                               c     0.000000E+00     4.079374E+04     6.000000E+04           
-        150  traj.phases.phase0.indep_states.states:alt_32                               c     0.000000E+00     4.093550E+04     6.000000E+04           
-        151  traj.phases.phase0.indep_states.states:alt_33                               c     0.000000E+00     4.107641E+04     6.000000E+04           
-        152  traj.phases.phase0.indep_states.states:alt_34                               c     0.000000E+00     4.106575E+04     6.000000E+04           
-        153  traj.phases.phase0.indep_states.states:alt_35                               c     0.000000E+00     4.106575E+04     6.000000E+04           
-        154  traj.phases.phase0.indep_states.states:alt_36                               c     0.000000E+00     4.093919E+04     6.000000E+04           
-        155  traj.phases.phase0.indep_states.states:alt_37                               c     0.000000E+00     4.085650E+04     6.000000E+04           
-        156  traj.phases.phase0.indep_states.states:alt_38                               c     0.000000E+00     4.093624E+04     6.000000E+04           
-        157  traj.phases.phase0.indep_states.states:alt_39                               c     0.000000E+00     4.093624E+04     6.000000E+04           
-        158  traj.phases.phase0.indep_states.states:alt_40                               c     0.000000E+00     4.129894E+04     6.000000E+04           
-        159  traj.phases.phase0.indep_states.states:alt_41                               c     0.000000E+00     4.178378E+04     6.000000E+04           
-        160  traj.phases.phase0.indep_states.states:alt_42                               c     0.000000E+00     4.181540E+04     6.000000E+04           
-        161  traj.phases.phase0.indep_states.states:alt_43                               c     0.000000E+00     4.181540E+04     6.000000E+04           
-        162  traj.phases.phase0.indep_states.states:alt_44                               c     0.000000E+00     4.146282E+04     6.000000E+04           
-        163  traj.phases.phase0.indep_states.states:alt_45                               c     0.000000E+00     3.890556E+04     6.000000E+04           
-        164  traj.phases.phase0.indep_states.states:alt_46                               c     0.000000E+00     3.730605E+04     6.000000E+04           
-        165  traj.phases.phase0.indep_states.states:alt_47                               c     0.000000E+00     3.730605E+04     6.000000E+04           
-        166  traj.phases.phase0.indep_states.states:alt_48                               c     0.000000E+00     3.341148E+04     6.000000E+04           
-        167  traj.phases.phase0.indep_states.states:alt_49                               c     0.000000E+00     2.654155E+04     6.000000E+04           
-        168  traj.phases.phase0.indep_states.states:alt_50                               c     0.000000E+00     2.420659E+04     6.000000E+04           
-        169  traj.phases.phase0.indep_states.states:alt_51                               c     0.000000E+00     2.420659E+04     6.000000E+04           
-        170  traj.phases.phase0.indep_states.states:alt_52                               c     0.000000E+00     2.068536E+04     6.000000E+04           
-        171  traj.phases.phase0.indep_states.states:alt_53                               c     0.000000E+00     1.582678E+04     6.000000E+04           
-        172  traj.phases.phase0.indep_states.states:alt_54                               c     0.000000E+00     1.428905E+04     6.000000E+04           
-        173  traj.phases.phase0.indep_states.states:alt_55                               c     0.000000E+00     1.428905E+04     6.000000E+04           
-        174  traj.phases.phase0.indep_states.states:alt_56                               c     0.000000E+00     1.276622E+04     6.000000E+04           
-        175  traj.phases.phase0.indep_states.states:alt_57                               c     0.000000E+00     1.066502E+04     6.000000E+04           
-        176  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_0       c    -3.000000E+03     3.000000E+03     3.000000E+03          U
-        177  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_1       c    -3.000000E+03     3.000000E+03     3.000000E+03          U
-        178  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_2       c    -3.000000E+03     3.000000E+03     3.000000E+03          U
-        179  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_3       c    -3.000000E+03     3.000000E+03     3.000000E+03          U
-        180  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_4       c    -3.000000E+03     3.000000E+03     3.000000E+03          U
-        181  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_5       c    -3.000000E+03     3.000000E+03     3.000000E+03          U
-        182  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_6       c    -3.000000E+03     3.000000E+03     3.000000E+03          U
-        183  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_7       c    -3.000000E+03     2.834019E+03     3.000000E+03           
-        184  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_8       c    -3.000000E+03     2.059978E+03     3.000000E+03           
-        185  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_9       c    -3.000000E+03     1.683330E+03     3.000000E+03           
-        186  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_10      c    -3.000000E+03     6.801718E+02     3.000000E+03           
-        187  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_11      c    -3.000000E+03     8.664953E-01     3.000000E+03           
-        188  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_12      c    -3.000000E+03    -4.385293E+01     3.000000E+03           
-        189  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_13      c    -3.000000E+03    -4.578130E+01     3.000000E+03           
-        190  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_14      c    -3.000000E+03    -2.088649E+01     3.000000E+03           
-        191  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_15      c    -3.000000E+03    -6.350457E+00     3.000000E+03           
-        192  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_16      c    -3.000000E+03     2.513607E+01     3.000000E+03           
-        193  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_17      c    -3.000000E+03     3.612232E+01     3.000000E+03           
-        194  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_18      c    -3.000000E+03     3.175800E+01     3.000000E+03           
-        195  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_19      c    -3.000000E+03     1.816925E+01     3.000000E+03           
-        196  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_20      c    -3.000000E+03     4.887360E+00     3.000000E+03           
-        197  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_21      c    -3.000000E+03     2.004612E+00     3.000000E+03           
-        198  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_22      c    -3.000000E+03     2.210606E+00     3.000000E+03           
-        199  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_23      c    -3.000000E+03     2.286244E+01     3.000000E+03           
-        200  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_24      c    -3.000000E+03     3.431911E+01     3.000000E+03           
-        201  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_25      c    -3.000000E+03     4.562287E+01     3.000000E+03           
-        202  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_26      c    -3.000000E+03     5.243266E+00     3.000000E+03           
-        203  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_27      c    -3.000000E+03    -2.105963E+01     3.000000E+03           
-        204  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_28      c    -3.000000E+03    -4.837048E+01     3.000000E+03           
-        205  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_29      c    -3.000000E+03     3.274670E+01     3.000000E+03           
-        206  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_30      c    -3.000000E+03     8.712005E+01     3.000000E+03           
-        207  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_31      c    -3.000000E+03     1.552976E+02     3.000000E+03           
-        208  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_32      c    -3.000000E+03     6.174615E+01     3.000000E+03           
-        209  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_33      c    -3.000000E+03    -1.318871E+01     3.000000E+03           
-        210  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_34      c    -3.000000E+03    -3.453103E+02     3.000000E+03           
-        211  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_35      c    -3.000000E+03    -1.352390E+03     3.000000E+03           
-        212  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_36      c    -3.000000E+03    -1.803712E+03     3.000000E+03           
-        213  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_37      c    -3.000000E+03    -2.502393E+03     3.000000E+03           
-        214  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_38      c    -3.000000E+03    -2.971240E+03     3.000000E+03           
-        215  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_39      c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
-        216  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_40      c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
-        217  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_41      c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
-        218  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_42      c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
-        219  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_43      c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
-        220  traj.phases.phase0.control_group.indep_controls.controls:climb_rate_44      c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
+      Index  Name                                                  Type      Lower Bound            Value      Upper Bound     Status
+          0  traj.phase0.t_duration_0                                 c     3.000000E-01     5.637564E+00     1.000000E+01           
+          1  traj.phases.phase0.indep_states.states:range_0           c     0.000000E+00     4.300778E+03     2.000000E+06           
+          2  traj.phases.phase0.indep_states.states:range_1           c     0.000000E+00     1.019478E+04     2.000000E+06           
+          3  traj.phases.phase0.indep_states.states:range_2           c     0.000000E+00     1.205044E+04     2.000000E+06           
+          4  traj.phases.phase0.indep_states.states:range_3           c     0.000000E+00     1.205044E+04     2.000000E+06           
+          5  traj.phases.phase0.indep_states.states:range_4           c     0.000000E+00     2.179716E+04     2.000000E+06           
+          6  traj.phases.phase0.indep_states.states:range_5           c     0.000000E+00     3.502521E+04     2.000000E+06           
+          7  traj.phases.phase0.indep_states.states:range_6           c     0.000000E+00     3.915789E+04     2.000000E+06           
+          8  traj.phases.phase0.indep_states.states:range_7           c     0.000000E+00     3.915789E+04     2.000000E+06           
+          9  traj.phases.phase0.indep_states.states:range_8           c     0.000000E+00     5.336791E+04     2.000000E+06           
+         10  traj.phases.phase0.indep_states.states:range_9           c     0.000000E+00     7.250027E+04     2.000000E+06           
+         11  traj.phases.phase0.indep_states.states:range_10          c     0.000000E+00     7.845561E+04     2.000000E+06           
+         12  traj.phases.phase0.indep_states.states:range_11          c     0.000000E+00     7.845561E+04     2.000000E+06           
+         13  traj.phases.phase0.indep_states.states:range_12          c     0.000000E+00     9.625935E+04     2.000000E+06           
+         14  traj.phases.phase0.indep_states.states:range_13          c     0.000000E+00     1.208337E+05     2.000000E+06           
+         15  traj.phases.phase0.indep_states.states:range_14          c     0.000000E+00     1.286109E+05     2.000000E+06           
+         16  traj.phases.phase0.indep_states.states:range_15          c     0.000000E+00     1.286109E+05     2.000000E+06           
+         17  traj.phases.phase0.indep_states.states:range_16          c     0.000000E+00     1.498279E+05     2.000000E+06           
+         18  traj.phases.phase0.indep_states.states:range_17          c     0.000000E+00     1.791031E+05     2.000000E+06           
+         19  traj.phases.phase0.indep_states.states:range_18          c     0.000000E+00     1.883686E+05     2.000000E+06           
+         20  traj.phases.phase0.indep_states.states:range_19          c     0.000000E+00     1.883686E+05     2.000000E+06           
+         21  traj.phases.phase0.indep_states.states:range_20          c     0.000000E+00     2.121241E+05     2.000000E+06           
+         22  traj.phases.phase0.indep_states.states:range_21          c     0.000000E+00     2.449018E+05     2.000000E+06           
+         23  traj.phases.phase0.indep_states.states:range_22          c     0.000000E+00     2.552758E+05     2.000000E+06           
+         24  traj.phases.phase0.indep_states.states:range_23          c     0.000000E+00     2.552758E+05     2.000000E+06           
+         25  traj.phases.phase0.indep_states.states:range_24          c     0.000000E+00     2.805971E+05     2.000000E+06           
+         26  traj.phases.phase0.indep_states.states:range_25          c     0.000000E+00     3.155354E+05     2.000000E+06           
+         27  traj.phases.phase0.indep_states.states:range_26          c     0.000000E+00     3.265932E+05     2.000000E+06           
+         28  traj.phases.phase0.indep_states.states:range_27          c     0.000000E+00     3.265932E+05     2.000000E+06           
+         29  traj.phases.phase0.indep_states.states:range_28          c     0.000000E+00     3.524437E+05     2.000000E+06           
+         30  traj.phases.phase0.indep_states.states:range_29          c     0.000000E+00     3.881121E+05     2.000000E+06           
+         31  traj.phases.phase0.indep_states.states:range_30          c     0.000000E+00     3.994010E+05     2.000000E+06           
+         32  traj.phases.phase0.indep_states.states:range_31          c     0.000000E+00     3.994010E+05     2.000000E+06           
+         33  traj.phases.phase0.indep_states.states:range_32          c     0.000000E+00     4.247223E+05     2.000000E+06           
+         34  traj.phases.phase0.indep_states.states:range_33          c     0.000000E+00     4.596605E+05     2.000000E+06           
+         35  traj.phases.phase0.indep_states.states:range_34          c     0.000000E+00     4.707183E+05     2.000000E+06           
+         36  traj.phases.phase0.indep_states.states:range_35          c     0.000000E+00     4.707183E+05     2.000000E+06           
+         37  traj.phases.phase0.indep_states.states:range_36          c     0.000000E+00     4.944738E+05     2.000000E+06           
+         38  traj.phases.phase0.indep_states.states:range_37          c     0.000000E+00     5.272515E+05     2.000000E+06           
+         39  traj.phases.phase0.indep_states.states:range_38          c     0.000000E+00     5.376255E+05     2.000000E+06           
+         40  traj.phases.phase0.indep_states.states:range_39          c     0.000000E+00     5.376255E+05     2.000000E+06           
+         41  traj.phases.phase0.indep_states.states:range_40          c     0.000000E+00     5.588425E+05     2.000000E+06           
+         42  traj.phases.phase0.indep_states.states:range_41          c     0.000000E+00     5.881176E+05     2.000000E+06           
+         43  traj.phases.phase0.indep_states.states:range_42          c     0.000000E+00     5.973831E+05     2.000000E+06           
+         44  traj.phases.phase0.indep_states.states:range_43          c     0.000000E+00     5.973831E+05     2.000000E+06           
+         45  traj.phases.phase0.indep_states.states:range_44          c     0.000000E+00     6.151931E+05     2.000000E+06           
+         46  traj.phases.phase0.indep_states.states:range_45          c     0.000000E+00     6.397625E+05     2.000000E+06           
+         47  traj.phases.phase0.indep_states.states:range_46          c     0.000000E+00     6.475361E+05     2.000000E+06           
+         48  traj.phases.phase0.indep_states.states:range_47          c     0.000000E+00     6.475361E+05     2.000000E+06           
+         49  traj.phases.phase0.indep_states.states:range_48          c     0.000000E+00     6.612680E+05     2.000000E+06           
+         50  traj.phases.phase0.indep_states.states:range_49          c     0.000000E+00     6.805947E+05     2.000000E+06           
+         51  traj.phases.phase0.indep_states.states:range_50          c     0.000000E+00     6.868473E+05     2.000000E+06           
+         52  traj.phases.phase0.indep_states.states:range_51          c     0.000000E+00     6.868473E+05     2.000000E+06           
+         53  traj.phases.phase0.indep_states.states:range_52          c     0.000000E+00     6.963491E+05     2.000000E+06           
+         54  traj.phases.phase0.indep_states.states:range_53          c     0.000000E+00     7.096820E+05     2.000000E+06           
+         55  traj.phases.phase0.indep_states.states:range_54          c     0.000000E+00     7.139547E+05     2.000000E+06           
+         56  traj.phases.phase0.indep_states.states:range_55          c     0.000000E+00     7.139547E+05     2.000000E+06           
+         57  traj.phases.phase0.indep_states.states:range_56          c     0.000000E+00     7.182109E+05     2.000000E+06           
+         58  traj.phases.phase0.indep_states.states:range_57          c     0.000000E+00     7.241240E+05     2.000000E+06           
+         59  traj.phases.phase0.indep_states.states:range_58          c     0.000000E+00     7.260052E+05     2.000000E+06           
+         60  traj.phases.phase0.indep_states.states:mass_fuel_0       c     0.000000E+00     2.957208E+02     1.500000E+03           
+         61  traj.phases.phase0.indep_states.states:mass_fuel_1       c     0.000000E+00     2.900371E+02     1.500000E+03           
+         62  traj.phases.phase0.indep_states.states:mass_fuel_2       c     0.000000E+00     2.882890E+02     1.500000E+03           
+         63  traj.phases.phase0.indep_states.states:mass_fuel_3       c     0.000000E+00     2.882890E+02     1.500000E+03           
+         64  traj.phases.phase0.indep_states.states:mass_fuel_4       c     0.000000E+00     2.794117E+02     1.500000E+03           
+         65  traj.phases.phase0.indep_states.states:mass_fuel_5       c     0.000000E+00     2.680940E+02     1.500000E+03           
+         66  traj.phases.phase0.indep_states.states:mass_fuel_6       c     0.000000E+00     2.647067E+02     1.500000E+03           
+         67  traj.phases.phase0.indep_states.states:mass_fuel_7       c     0.000000E+00     2.647067E+02     1.500000E+03           
+         68  traj.phases.phase0.indep_states.states:mass_fuel_8       c     0.000000E+00     2.535688E+02     1.500000E+03           
+         69  traj.phases.phase0.indep_states.states:mass_fuel_9       c     0.000000E+00     2.401846E+02     1.500000E+03           
+         70  traj.phases.phase0.indep_states.states:mass_fuel_10      c     0.000000E+00     2.364961E+02     1.500000E+03           
+         71  traj.phases.phase0.indep_states.states:mass_fuel_11      c     0.000000E+00     2.364961E+02     1.500000E+03           
+         72  traj.phases.phase0.indep_states.states:mass_fuel_12      c     0.000000E+00     2.271299E+02     1.500000E+03           
+         73  traj.phases.phase0.indep_states.states:mass_fuel_13      c     0.000000E+00     2.167573E+02     1.500000E+03           
+         74  traj.phases.phase0.indep_states.states:mass_fuel_14      c     0.000000E+00     2.137292E+02     1.500000E+03           
+         75  traj.phases.phase0.indep_states.states:mass_fuel_15      c     0.000000E+00     2.137292E+02     1.500000E+03           
+         76  traj.phases.phase0.indep_states.states:mass_fuel_16      c     0.000000E+00     2.055422E+02     1.500000E+03           
+         77  traj.phases.phase0.indep_states.states:mass_fuel_17      c     0.000000E+00     1.942336E+02     1.500000E+03           
+         78  traj.phases.phase0.indep_states.states:mass_fuel_18      c     0.000000E+00     1.906363E+02     1.500000E+03           
+         79  traj.phases.phase0.indep_states.states:mass_fuel_19      c     0.000000E+00     1.906363E+02     1.500000E+03           
+         80  traj.phases.phase0.indep_states.states:mass_fuel_20      c     0.000000E+00     1.813581E+02     1.500000E+03           
+         81  traj.phases.phase0.indep_states.states:mass_fuel_21      c     0.000000E+00     1.684992E+02     1.500000E+03           
+         82  traj.phases.phase0.indep_states.states:mass_fuel_22      c     0.000000E+00     1.644355E+02     1.500000E+03           
+         83  traj.phases.phase0.indep_states.states:mass_fuel_23      c     0.000000E+00     1.644355E+02     1.500000E+03           
+         84  traj.phases.phase0.indep_states.states:mass_fuel_24      c     0.000000E+00     1.545567E+02     1.500000E+03           
+         85  traj.phases.phase0.indep_states.states:mass_fuel_25      c     0.000000E+00     1.410094E+02     1.500000E+03           
+         86  traj.phases.phase0.indep_states.states:mass_fuel_26      c     0.000000E+00     1.367383E+02     1.500000E+03           
+         87  traj.phases.phase0.indep_states.states:mass_fuel_27      c     0.000000E+00     1.367383E+02     1.500000E+03           
+         88  traj.phases.phase0.indep_states.states:mass_fuel_28      c     0.000000E+00     1.267738E+02     1.500000E+03           
+         89  traj.phases.phase0.indep_states.states:mass_fuel_29      c     0.000000E+00     1.130185E+02     1.500000E+03           
+         90  traj.phases.phase0.indep_states.states:mass_fuel_30      c     0.000000E+00     1.086503E+02     1.500000E+03           
+         91  traj.phases.phase0.indep_states.states:mass_fuel_31      c     0.000000E+00     1.086503E+02     1.500000E+03           
+         92  traj.phases.phase0.indep_states.states:mass_fuel_32      c     0.000000E+00     9.882576E+01     1.500000E+03           
+         93  traj.phases.phase0.indep_states.states:mass_fuel_33      c     0.000000E+00     8.534598E+01     1.500000E+03           
+         94  traj.phases.phase0.indep_states.states:mass_fuel_34      c     0.000000E+00     8.113326E+01     1.500000E+03           
+         95  traj.phases.phase0.indep_states.states:mass_fuel_35      c     0.000000E+00     8.113326E+01     1.500000E+03           
+         96  traj.phases.phase0.indep_states.states:mass_fuel_36      c     0.000000E+00     7.218115E+01     1.500000E+03           
+         97  traj.phases.phase0.indep_states.states:mass_fuel_37      c     0.000000E+00     5.977772E+01     1.500000E+03           
+         98  traj.phases.phase0.indep_states.states:mass_fuel_38      c     0.000000E+00     5.576977E+01     1.500000E+03           
+         99  traj.phases.phase0.indep_states.states:mass_fuel_39      c     0.000000E+00     5.576977E+01     1.500000E+03           
+        100  traj.phases.phase0.indep_states.states:mass_fuel_40      c     0.000000E+00     4.741802E+01     1.500000E+03           
+        101  traj.phases.phase0.indep_states.states:mass_fuel_41      c     0.000000E+00     3.592792E+01     1.500000E+03           
+        102  traj.phases.phase0.indep_states.states:mass_fuel_42      c     0.000000E+00     3.239650E+01     1.500000E+03           
+        103  traj.phases.phase0.indep_states.states:mass_fuel_43      c     0.000000E+00     3.239650E+01     1.500000E+03           
+        104  traj.phases.phase0.indep_states.states:mass_fuel_44      c     0.000000E+00     2.595940E+01     1.500000E+03           
+        105  traj.phases.phase0.indep_states.states:mass_fuel_45      c     0.000000E+00     1.877799E+01     1.500000E+03           
+        106  traj.phases.phase0.indep_states.states:mass_fuel_46      c     0.000000E+00     1.714586E+01     1.500000E+03           
+        107  traj.phases.phase0.indep_states.states:mass_fuel_47      c     0.000000E+00     1.714586E+01     1.500000E+03           
+        108  traj.phases.phase0.indep_states.states:mass_fuel_48      c     0.000000E+00     1.500522E+01     1.500000E+03           
+        109  traj.phases.phase0.indep_states.states:mass_fuel_49      c     0.000000E+00     1.243555E+01     1.500000E+03           
+        110  traj.phases.phase0.indep_states.states:mass_fuel_50      c     0.000000E+00     1.141787E+01     1.500000E+03           
+        111  traj.phases.phase0.indep_states.states:mass_fuel_51      c     0.000000E+00     1.141787E+01     1.500000E+03           
+        112  traj.phases.phase0.indep_states.states:mass_fuel_52      c     0.000000E+00     9.500576E+00     1.500000E+03           
+        113  traj.phases.phase0.indep_states.states:mass_fuel_53      c     0.000000E+00     5.938689E+00     1.500000E+03           
+        114  traj.phases.phase0.indep_states.states:mass_fuel_54      c     0.000000E+00     4.560755E+00     1.500000E+03           
+        115  traj.phases.phase0.indep_states.states:mass_fuel_55      c     0.000000E+00     4.560755E+00     1.500000E+03           
+        116  traj.phases.phase0.indep_states.states:mass_fuel_56      c     0.000000E+00     3.066294E+00     1.500000E+03           
+        117  traj.phases.phase0.indep_states.states:mass_fuel_57      c     0.000000E+00     7.801232E-01     1.500000E+03           
+        118  traj.phases.phase0.indep_states.states:alt_0             c     0.000000E+00     1.152283E+04     6.000000E+04           
+        119  traj.phases.phase0.indep_states.states:alt_1             c     0.000000E+00     1.362403E+04     6.000000E+04           
+        120  traj.phases.phase0.indep_states.states:alt_2             c     0.000000E+00     1.428905E+04     6.000000E+04           
+        121  traj.phases.phase0.indep_states.states:alt_3             c     0.000000E+00     1.428905E+04     6.000000E+04           
+        122  traj.phases.phase0.indep_states.states:alt_4             c     0.000000E+00     1.781028E+04     6.000000E+04           
+        123  traj.phases.phase0.indep_states.states:alt_5             c     0.000000E+00     2.266886E+04     6.000000E+04           
+        124  traj.phases.phase0.indep_states.states:alt_6             c     0.000000E+00     2.420659E+04     6.000000E+04           
+        125  traj.phases.phase0.indep_states.states:alt_7             c     0.000000E+00     2.420659E+04     6.000000E+04           
+        126  traj.phases.phase0.indep_states.states:alt_8             c     0.000000E+00     2.947162E+04     6.000000E+04           
+        127  traj.phases.phase0.indep_states.states:alt_9             c     0.000000E+00     3.563844E+04     6.000000E+04           
+        128  traj.phases.phase0.indep_states.states:alt_10            c     0.000000E+00     3.710398E+04     6.000000E+04           
+        129  traj.phases.phase0.indep_states.states:alt_11            c     0.000000E+00     3.710398E+04     6.000000E+04           
+        130  traj.phases.phase0.indep_states.states:alt_12            c     0.000000E+00     3.977282E+04     6.000000E+04           
+        131  traj.phases.phase0.indep_states.states:alt_13            c     0.000000E+00     4.064817E+04     6.000000E+04           
+        132  traj.phases.phase0.indep_states.states:alt_14            c     0.000000E+00     4.061937E+04     6.000000E+04           
+        133  traj.phases.phase0.indep_states.states:alt_15            c     0.000000E+00     4.061937E+04     6.000000E+04           
+        134  traj.phases.phase0.indep_states.states:alt_16            c     0.000000E+00     4.049115E+04     6.000000E+04           
+        135  traj.phases.phase0.indep_states.states:alt_17            c     0.000000E+00     4.035335E+04     6.000000E+04           
+        136  traj.phases.phase0.indep_states.states:alt_18            c     0.000000E+00     4.033652E+04     6.000000E+04           
+        137  traj.phases.phase0.indep_states.states:alt_19            c     0.000000E+00     4.033652E+04     6.000000E+04           
+        138  traj.phases.phase0.indep_states.states:alt_20            c     0.000000E+00     4.037082E+04     6.000000E+04           
+        139  traj.phases.phase0.indep_states.states:alt_21            c     0.000000E+00     4.051554E+04     6.000000E+04           
+        140  traj.phases.phase0.indep_states.states:alt_22            c     0.000000E+00     4.056201E+04     6.000000E+04           
+        141  traj.phases.phase0.indep_states.states:alt_23            c     0.000000E+00     4.056201E+04     6.000000E+04           
+        142  traj.phases.phase0.indep_states.states:alt_24            c     0.000000E+00     4.064375E+04     6.000000E+04           
+        143  traj.phases.phase0.indep_states.states:alt_25            c     0.000000E+00     4.069400E+04     6.000000E+04           
+        144  traj.phases.phase0.indep_states.states:alt_26            c     0.000000E+00     4.069891E+04     6.000000E+04           
+        145  traj.phases.phase0.indep_states.states:alt_27            c     0.000000E+00     4.069891E+04     6.000000E+04           
+        146  traj.phases.phase0.indep_states.states:alt_28            c     0.000000E+00     4.070254E+04     6.000000E+04           
+        147  traj.phases.phase0.indep_states.states:alt_29            c     0.000000E+00     4.075183E+04     6.000000E+04           
+        148  traj.phases.phase0.indep_states.states:alt_30            c     0.000000E+00     4.079374E+04     6.000000E+04           
+        149  traj.phases.phase0.indep_states.states:alt_31            c     0.000000E+00     4.079374E+04     6.000000E+04           
+        150  traj.phases.phase0.indep_states.states:alt_32            c     0.000000E+00     4.093550E+04     6.000000E+04           
+        151  traj.phases.phase0.indep_states.states:alt_33            c     0.000000E+00     4.107641E+04     6.000000E+04           
+        152  traj.phases.phase0.indep_states.states:alt_34            c     0.000000E+00     4.106575E+04     6.000000E+04           
+        153  traj.phases.phase0.indep_states.states:alt_35            c     0.000000E+00     4.106575E+04     6.000000E+04           
+        154  traj.phases.phase0.indep_states.states:alt_36            c     0.000000E+00     4.093919E+04     6.000000E+04           
+        155  traj.phases.phase0.indep_states.states:alt_37            c     0.000000E+00     4.085650E+04     6.000000E+04           
+        156  traj.phases.phase0.indep_states.states:alt_38            c     0.000000E+00     4.093624E+04     6.000000E+04           
+        157  traj.phases.phase0.indep_states.states:alt_39            c     0.000000E+00     4.093624E+04     6.000000E+04           
+        158  traj.phases.phase0.indep_states.states:alt_40            c     0.000000E+00     4.129894E+04     6.000000E+04           
+        159  traj.phases.phase0.indep_states.states:alt_41            c     0.000000E+00     4.178378E+04     6.000000E+04           
+        160  traj.phases.phase0.indep_states.states:alt_42            c     0.000000E+00     4.181540E+04     6.000000E+04           
+        161  traj.phases.phase0.indep_states.states:alt_43            c     0.000000E+00     4.181540E+04     6.000000E+04           
+        162  traj.phases.phase0.indep_states.states:alt_44            c     0.000000E+00     4.146282E+04     6.000000E+04           
+        163  traj.phases.phase0.indep_states.states:alt_45            c     0.000000E+00     3.890556E+04     6.000000E+04           
+        164  traj.phases.phase0.indep_states.states:alt_46            c     0.000000E+00     3.730605E+04     6.000000E+04           
+        165  traj.phases.phase0.indep_states.states:alt_47            c     0.000000E+00     3.730605E+04     6.000000E+04           
+        166  traj.phases.phase0.indep_states.states:alt_48            c     0.000000E+00     3.341148E+04     6.000000E+04           
+        167  traj.phases.phase0.indep_states.states:alt_49            c     0.000000E+00     2.654155E+04     6.000000E+04           
+        168  traj.phases.phase0.indep_states.states:alt_50            c     0.000000E+00     2.420659E+04     6.000000E+04           
+        169  traj.phases.phase0.indep_states.states:alt_51            c     0.000000E+00     2.420659E+04     6.000000E+04           
+        170  traj.phases.phase0.indep_states.states:alt_52            c     0.000000E+00     2.068536E+04     6.000000E+04           
+        171  traj.phases.phase0.indep_states.states:alt_53            c     0.000000E+00     1.582678E+04     6.000000E+04           
+        172  traj.phases.phase0.indep_states.states:alt_54            c     0.000000E+00     1.428905E+04     6.000000E+04           
+        173  traj.phases.phase0.indep_states.states:alt_55            c     0.000000E+00     1.428905E+04     6.000000E+04           
+        174  traj.phases.phase0.indep_states.states:alt_56            c     0.000000E+00     1.276622E+04     6.000000E+04           
+        175  traj.phases.phase0.indep_states.states:alt_57            c     0.000000E+00     1.066502E+04     6.000000E+04           
+        176  traj.phase0.controls:climb_rate_0                        c    -3.000000E+03     3.000000E+03     3.000000E+03          U
+        177  traj.phase0.controls:climb_rate_1                        c    -3.000000E+03     3.000000E+03     3.000000E+03          U
+        178  traj.phase0.controls:climb_rate_2                        c    -3.000000E+03     3.000000E+03     3.000000E+03          U
+        179  traj.phase0.controls:climb_rate_3                        c    -3.000000E+03     3.000000E+03     3.000000E+03          U
+        180  traj.phase0.controls:climb_rate_4                        c    -3.000000E+03     3.000000E+03     3.000000E+03          U
+        181  traj.phase0.controls:climb_rate_5                        c    -3.000000E+03     3.000000E+03     3.000000E+03          U
+        182  traj.phase0.controls:climb_rate_6                        c    -3.000000E+03     3.000000E+03     3.000000E+03          U
+        183  traj.phase0.controls:climb_rate_7                        c    -3.000000E+03     2.834019E+03     3.000000E+03           
+        184  traj.phase0.controls:climb_rate_8                        c    -3.000000E+03     2.059978E+03     3.000000E+03           
+        185  traj.phase0.controls:climb_rate_9                        c    -3.000000E+03     1.683330E+03     3.000000E+03           
+        186  traj.phase0.controls:climb_rate_10                       c    -3.000000E+03     6.801718E+02     3.000000E+03           
+        187  traj.phase0.controls:climb_rate_11                       c    -3.000000E+03     8.664953E-01     3.000000E+03           
+        188  traj.phase0.controls:climb_rate_12                       c    -3.000000E+03    -4.385293E+01     3.000000E+03           
+        189  traj.phase0.controls:climb_rate_13                       c    -3.000000E+03    -4.578130E+01     3.000000E+03           
+        190  traj.phase0.controls:climb_rate_14                       c    -3.000000E+03    -2.088649E+01     3.000000E+03           
+        191  traj.phase0.controls:climb_rate_15                       c    -3.000000E+03    -6.350457E+00     3.000000E+03           
+        192  traj.phase0.controls:climb_rate_16                       c    -3.000000E+03     2.513607E+01     3.000000E+03           
+        193  traj.phase0.controls:climb_rate_17                       c    -3.000000E+03     3.612232E+01     3.000000E+03           
+        194  traj.phase0.controls:climb_rate_18                       c    -3.000000E+03     3.175800E+01     3.000000E+03           
+        195  traj.phase0.controls:climb_rate_19                       c    -3.000000E+03     1.816925E+01     3.000000E+03           
+        196  traj.phase0.controls:climb_rate_20                       c    -3.000000E+03     4.887360E+00     3.000000E+03           
+        197  traj.phase0.controls:climb_rate_21                       c    -3.000000E+03     2.004612E+00     3.000000E+03           
+        198  traj.phase0.controls:climb_rate_22                       c    -3.000000E+03     2.210606E+00     3.000000E+03           
+        199  traj.phase0.controls:climb_rate_23                       c    -3.000000E+03     2.286244E+01     3.000000E+03           
+        200  traj.phase0.controls:climb_rate_24                       c    -3.000000E+03     3.431911E+01     3.000000E+03           
+        201  traj.phase0.controls:climb_rate_25                       c    -3.000000E+03     4.562287E+01     3.000000E+03           
+        202  traj.phase0.controls:climb_rate_26                       c    -3.000000E+03     5.243266E+00     3.000000E+03           
+        203  traj.phase0.controls:climb_rate_27                       c    -3.000000E+03    -2.105963E+01     3.000000E+03           
+        204  traj.phase0.controls:climb_rate_28                       c    -3.000000E+03    -4.837048E+01     3.000000E+03           
+        205  traj.phase0.controls:climb_rate_29                       c    -3.000000E+03     3.274670E+01     3.000000E+03           
+        206  traj.phase0.controls:climb_rate_30                       c    -3.000000E+03     8.712005E+01     3.000000E+03           
+        207  traj.phase0.controls:climb_rate_31                       c    -3.000000E+03     1.552976E+02     3.000000E+03           
+        208  traj.phase0.controls:climb_rate_32                       c    -3.000000E+03     6.174615E+01     3.000000E+03           
+        209  traj.phase0.controls:climb_rate_33                       c    -3.000000E+03    -1.318871E+01     3.000000E+03           
+        210  traj.phase0.controls:climb_rate_34                       c    -3.000000E+03    -3.453103E+02     3.000000E+03           
+        211  traj.phase0.controls:climb_rate_35                       c    -3.000000E+03    -1.352390E+03     3.000000E+03           
+        212  traj.phase0.controls:climb_rate_36                       c    -3.000000E+03    -1.803712E+03     3.000000E+03           
+        213  traj.phase0.controls:climb_rate_37                       c    -3.000000E+03    -2.502393E+03     3.000000E+03           
+        214  traj.phase0.controls:climb_rate_38                       c    -3.000000E+03    -2.971240E+03     3.000000E+03           
+        215  traj.phase0.controls:climb_rate_39                       c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
+        216  traj.phase0.controls:climb_rate_40                       c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
+        217  traj.phase0.controls:climb_rate_41                       c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
+        218  traj.phase0.controls:climb_rate_42                       c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
+        219  traj.phase0.controls:climb_rate_43                       c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
+        220  traj.phase0.controls:climb_rate_44                       c    -3.000000E+03    -3.000000E+03     3.000000E+03          L
 
    Constraints (i - inequality, e - equality)
       Index  Name                                                                    Type          Lower           Value           Upper    Status  Lagrange Multiplier (N/A)
