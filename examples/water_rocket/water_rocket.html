@@ -951,8 +951,8 @@ The design of a water rocket is somewhat constrained by the soda bottle used as 
 This means that the volume available for water and air is fixed, the initial launch pressure is limited by the bottle’s strength (since the pressure is directly related to the energy available for the rocket, it is easy to see that it should be as high as possible) and the nozzle throat area is also fixed.
 Given these manufacturing constraints, the design variables we are left with are the empty mass (it can be easily changed through adding ballast), the water volume at the launch, and the launch angle.
 With this considerations in mind, a natural formulation for the water rocket problem is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-75d56be7-8261-405d-bee2-4accf1d046c8">
-<span class="eqno">(84)<a class="headerlink" href="#equation-75d56be7-8261-405d-bee2-4accf1d046c8" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-23fa0b5d-52fd-456b-926d-b10db750f430">
+<span class="eqno">(84)<a class="headerlink" href="#equation-23fa0b5d-52fd-456b-926d-b10db750f430" title="Permalink to this equation">#</a></span>\[\begin{align}
     \text{maximize}   &amp;\quad \text{range or height} \\
     \text{w.r.t.}     &amp;\quad \text{empty mass, initial water volume, launch angle, trajectory} \\
     \text{subject to} &amp;\quad \text{flight dynamics} \\
@@ -1495,8 +1495,8 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">_MassAdder</span></code> component calculates the rocket’s instantaneous mass by
 summing the water mass with the rockets empty mass, i.e.</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f1e84aa6-0eed-4ca5-b64e-16b9c41adc0d">
-<span class="eqno">(85)<a class="headerlink" href="#equation-f1e84aa6-0eed-4ca5-b64e-16b9c41adc0d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e80ee108-c42e-4e2a-83df-1cc278511d12">
+<span class="eqno">(85)<a class="headerlink" href="#equation-e80ee108-c42e-4e2a-83df-1cc278511d12" title="Permalink to this equation">#</a></span>\[\begin{align}
     m = m_\text{empty}+\rho_w V_w
 \end{align}\]</div>
 <div class="cell tag_remove-input docutils container">
@@ -2513,7 +2513,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 Model viewer data has already been recorded for Driver.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 1.632518 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 1.622898 seconds.
 Total jacobian shape: (1151, 1153) 
 </pre></div>
 </div>
@@ -2522,10 +2522,10 @@ FWD solves: 20   REV solves: 0
 Total colors vs. total size: 20 vs 1153  (98.27% improvement)
 
 Sparsity computed using tolerance: 1e-12
-Time to compute sparsity:   1.6325 sec
-Time to compute coloring:   1.9431 sec
-Memory to compute coloring:  -9.7539 MB
-Coloring created on: 2023-11-29 19:20:21
+Time to compute sparsity:   1.6229 sec
+Time to compute coloring:   1.9547 sec
+Memory to compute coloring:  -9.6250 MB
+Coloring created on: 2023-12-07 17:31:24
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>List of user-set options:
@@ -2541,7 +2541,9 @@ Coloring created on: 2023-11-29 19:20:21
                              print_level = 4                     yes
                       print_user_options = yes                   yes
                                       sb = yes                   yes
-Total number of variables............................:     1153
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total number of variables............................:     1153
                      variables with only lower bounds:      450
                 variables with lower and upper bounds:      157
                      variables with only upper bounds:       30
@@ -2570,7 +2572,7 @@ Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 62
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 6.128
+Total seconds in IPOPT                               = 6.297
 
 EXIT: Optimal Solution Found.
 </pre></div>
@@ -2675,7 +2677,7 @@ Maximum velocity: 46.1530 m/s
 Model viewer data has already been recorded for Driver.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 1.594710 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 1.619397 seconds.
 Total jacobian shape: (1151, 1153) 
 </pre></div>
 </div>
@@ -2684,10 +2686,10 @@ FWD solves: 20   REV solves: 0
 Total colors vs. total size: 20 vs 1153  (98.27% improvement)
 
 Sparsity computed using tolerance: 1e-12
-Time to compute sparsity:   1.5947 sec
-Time to compute coloring:   1.9410 sec
+Time to compute sparsity:   1.6194 sec
+Time to compute coloring:   1.9552 sec
 Memory to compute coloring:   0.0000 MB
-Coloring created on: 2023-11-29 19:20:43
+Coloring created on: 2023-12-07 17:31:46
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>List of user-set options:
@@ -2703,7 +2705,9 @@ Coloring created on: 2023-11-29 19:20:43
                              print_level = 4                     yes
                       print_user_options = yes                   yes
                                       sb = yes                   yes
-Total number of variables............................:     1153
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total number of variables............................:     1153
                      variables with only lower bounds:      450
                 variables with lower and upper bounds:      157
                      variables with only upper bounds:       30
@@ -2732,7 +2736,7 @@ Number of inequality constraint evaluations          = 0
 Number of equality constraint Jacobian evaluations   = 49
 Number of inequality constraint Jacobian evaluations = 0
 Number of Lagrangian Hessian evaluations             = 0
-Total seconds in IPOPT                               = 5.170
+Total seconds in IPOPT                               = 5.328
 
 EXIT: Optimal Solution Found.
 
@@ -2743,11 +2747,11 @@ Optimization Problem -- Optimization using pyOpt_sparse
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    5.1712
-       User Objective Time :       0.1689
-       User Sensitivity Time :     3.5200
-       Interface Time :            0.9451
-       Opt Solver Time:            0.5372
+    Total Time:                    5.3287
+       User Objective Time :       0.1757
+       User Sensitivity Time :     3.6398
+       Interface Time :            0.9660
+       Opt Solver Time:            0.5472
     Calls to Objective Function :      56
     Calls to Sens Function :           49
 
