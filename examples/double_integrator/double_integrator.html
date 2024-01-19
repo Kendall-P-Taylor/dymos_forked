@@ -799,20 +799,20 @@ traveled by a block (that starts and ends at rest) sliding without
 friction along a horizontal surface, with acceleration as the control.</p>
 <p>We minimize the final time, <span class="math notranslate nohighlight">\(t_f\)</span>, by varying the dynamic control,
 <span class="math notranslate nohighlight">\(u\)</span>, subject to the dynamics:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d0f156f5-c13c-4298-9bdb-0373783f560f">
-<span class="eqno">(45)<a class="headerlink" href="#equation-d0f156f5-c13c-4298-9bdb-0373783f560f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fc40102f-8518-4b06-ac1a-37884e7489b1">
+<span class="eqno">(45)<a class="headerlink" href="#equation-fc40102f-8518-4b06-ac1a-37884e7489b1" title="Permalink to this equation">#</a></span>\[\begin{align}
   \frac{dx}{dt} &amp;= v \\
   \frac{dv}{dt} &amp;= u
 \end{align}\]</div>
 <p>The initial conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d1215812-5a8e-45be-b05d-31ff2496e674">
-<span class="eqno">(46)<a class="headerlink" href="#equation-d1215812-5a8e-45be-b05d-31ff2496e674" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-11621b31-e5e4-42f7-97e8-1abae247b8db">
+<span class="eqno">(46)<a class="headerlink" href="#equation-11621b31-e5e4-42f7-97e8-1abae247b8db" title="Permalink to this equation">#</a></span>\[\begin{align}
   x_0 &amp;= 0 \\
   v_0 &amp;= 0
 \end{align}\]</div>
 <p>and the final conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-129bbe5c-cb62-4910-8a30-64e9827d12b9">
-<span class="eqno">(47)<a class="headerlink" href="#equation-129bbe5c-cb62-4910-8a30-64e9827d12b9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-cf524bce-9aec-4e6a-845a-82a61fd59613">
+<span class="eqno">(47)<a class="headerlink" href="#equation-cf524bce-9aec-4e6a-845a-82a61fd59613" title="Permalink to this equation">#</a></span>\[\begin{align}
   x_f &amp;= \rm{free} \\
   v_f &amp;= 0
 \end{align}\]</div>
@@ -1083,7 +1083,7 @@ INFO: checking out_of_order
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: checking auto_ivc_warnings
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.064108 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.092453 seconds.
 Total jacobian shape: (181, 327) 
 </pre></div>
 </div>
@@ -1092,10 +1092,10 @@ FWD solves: 0   REV solves: 6
 Total colors vs. total size: 6 vs 181  (96.69% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity:   0.0641 sec
-Time to compute coloring:   0.1037 sec
+Time to compute sparsity:   0.0925 sec
+Time to compute coloring:   0.1671 sec
 Memory to compute coloring:   0.2500 MB
-Coloring created on: 2024-01-19 14:44:31
+Coloring created on: 2024-01-19 21:03:22
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization Problem -- Optimization using pyOpt_sparse
@@ -1104,11 +1104,11 @@ Coloring created on: 2024-01-19 14:44:31
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    1.8280
-       User Objective Time :       0.0160
-       User Sensitivity Time :     0.0552
-       Interface Time :            0.0832
-       Opt Solver Time:            1.6737
+    Total Time:                    2.2581
+       User Objective Time :       0.0322
+       User Sensitivity Time :     0.0771
+       Interface Time :            0.1127
+       Opt Solver Time:            2.0361
     Calls to Objective Function :      19
     Calls to Sens Function :           19
 
