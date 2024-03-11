@@ -809,8 +809,8 @@ optimal control problem governed by six equations of motion and limited
 by the aerodynamic heating rate. For a detailed layout of this problem
 and other optimal control problems see Betts <span id="id1">[<a class="reference internal" href="#id19" title="J. Betts. Practical Methods for Optimal Control and Estimation Using Nonlinear Programming. Society for Industrial and Applied Mathematics, second edition, 2010. URL: https://epubs.siam.org/doi/abs/10.1137/1.9780898718577, arXiv:https://epubs.siam.org/doi/pdf/10.1137/1.9780898718577, doi:10.1137/1.9780898718577.">Bet10</a>]</span>.
 The governing equations of motion for this problem are:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ea0311a6-a652-4b68-aad0-44ea3226e4ee">
-<span class="eqno">(74)<a class="headerlink" href="#equation-ea0311a6-a652-4b68-aad0-44ea3226e4ee" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-859eb0b6-2f6f-4b62-ae2a-c6280f8c663d">
+<span class="eqno">(74)<a class="headerlink" href="#equation-859eb0b6-2f6f-4b62-ae2a-c6280f8c663d" title="Permalink to this equation">#</a></span>\[\begin{align}
   \frac{dh}{dt} &amp;= v \sin \gamma \\
   \frac{d\phi}{dt} &amp;= \frac{v}{r} \cos \gamma \frac{\sin \psi}{\cos \theta} \\
   \frac{d\theta}{dt} &amp;= \frac{v}{r} \cos \gamma \cos \psi  \\
@@ -833,8 +833,8 @@ final altitude, without exceding a maximum heat rate at the leading
 edges. This heat rate is constrained by <span class="math notranslate nohighlight">\(q \leq 70\)</span> where q
 <span class="math notranslate nohighlight">\([\frac{btu}{ft^2s}]\)</span> is the heating rate.</p>
 <p>The initial conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ffdd464c-99e0-43be-b391-bb35fc368ba4">
-<span class="eqno">(75)<a class="headerlink" href="#equation-ffdd464c-99e0-43be-b391-bb35fc368ba4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-5cbd0a84-70ce-4f83-ace8-eb849b261fc3">
+<span class="eqno">(75)<a class="headerlink" href="#equation-5cbd0a84-70ce-4f83-ace8-eb849b261fc3" title="Permalink to this equation">#</a></span>\[\begin{align}
   h_0 &amp;= 26000 \\
   v_0 &amp;= 25600 \\
   \phi_0 &amp;= 0 \\
@@ -843,8 +843,8 @@ edges. This heat rate is constrained by <span class="math notranslate nohighligh
   \psi_0 &amp;= \frac{\pi}{2}
 \end{align}\]</div>
 <p>and the final conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-36ca345d-ac69-463b-a220-1dcdd598311e">
-<span class="eqno">(76)<a class="headerlink" href="#equation-36ca345d-ac69-463b-a220-1dcdd598311e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f3f551bb-e8ae-4103-820a-d8c736646bbc">
+<span class="eqno">(76)<a class="headerlink" href="#equation-f3f551bb-e8ae-4103-820a-d8c736646bbc" title="Permalink to this equation">#</a></span>\[\begin{align}
   h_0 &amp;= 80000 \\
   v_0 &amp;= 2500 \\
   \gamma_0 &amp;= -0.08727 \\
@@ -862,13 +862,13 @@ second component computes the aerodynamic forces of lift and drag on the
 shuttle. The third component is where the heating rate on the leading
 edge of the shuttles wings is computed. The heating rate is given by
 <span class="math notranslate nohighlight">\(q = q_a q_r\)</span> where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-49c1548d-705b-498c-b3ca-e4c0117ebf5a">
-<span class="eqno">(77)<a class="headerlink" href="#equation-49c1548d-705b-498c-b3ca-e4c0117ebf5a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7b351bc3-047b-4ca7-8a05-dda8e0768689">
+<span class="eqno">(77)<a class="headerlink" href="#equation-7b351bc3-047b-4ca7-8a05-dda8e0768689" title="Permalink to this equation">#</a></span>\[\begin{align}
   q_a &amp;= c_0 + c_1\alpha + c_2 \alpha^2 + c_3 \alpha^3
 \end{align}\]</div>
 <p>and</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9f5343ed-47e7-463a-a097-d1bfcb593ad2">
-<span class="eqno">(78)<a class="headerlink" href="#equation-9f5343ed-47e7-463a-a097-d1bfcb593ad2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-dc1fbc49-92e6-43c5-937c-328e08597158">
+<span class="eqno">(78)<a class="headerlink" href="#equation-dc1fbc49-92e6-43c5-937c-328e08597158" title="Permalink to this equation">#</a></span>\[\begin{align}
   q_r &amp;= 17700 \rho^.5 (.0001v)^{3.07}
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\(c_0, c_1, c_2,\)</span> and <span class="math notranslate nohighlight">\(c_3\)</span> are constants, <span class="math notranslate nohighlight">\(\alpha\)</span> <span class="math notranslate nohighlight">\([deg]\)</span> is the
@@ -1465,7 +1465,7 @@ INFO: checking out_of_order
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: checking auto_ivc_warnings
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.897068 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian was computed 3 times, taking 0.912209 seconds.
 Total jacobian shape: (327, 358) 
 </pre></div>
 </div>
@@ -1474,10 +1474,10 @@ FWD solves: 20   REV solves: 0
 Total colors vs. total size: 20 vs 358  (94.41% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity:   0.8971 sec
-Time to compute coloring:   0.3143 sec
+Time to compute sparsity:   0.9122 sec
+Time to compute coloring:   0.3096 sec
 Memory to compute coloring:   0.2500 MB
-Coloring created on: 2024-02-20 17:08:47
+Coloring created on: 2024-03-11 20:30:33
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/test/lib/python3.10/site-packages/dymos/examples/shuttle_reentry/heating_comp.py:45: RuntimeWarning: invalid value encountered in power
@@ -1490,11 +1490,11 @@ Coloring created on: 2024-02-20 17:08:47
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                   22.5616
-       User Objective Time :       0.3979
-       User Sensitivity Time :     3.1391
-       Interface Time :            0.9519
-       Opt Solver Time:           18.0728
+    Total Time:                   22.3412
+       User Objective Time :       0.4031
+       User Sensitivity Time :     3.1854
+       Interface Time :            0.9399
+       Opt Solver Time:           17.8128
     Calls to Objective Function :     274
     Calls to Sens Function :          141
 
