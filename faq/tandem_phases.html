@@ -802,8 +802,8 @@ This is one application of the interpolating timeseries component.</p>
 This is a trivial solution which should find a straight line from the starting point to the ending point.</p>
 <p>There are two phases involved, the first utilizes the standard ODE for the brachistochrone problem.
 The second integrates the arclength (𝑆) of the wire using the equation:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8c6528a0-a5de-461c-9935-7dd280501de7">
-<span class="eqno">(102)<a class="headerlink" href="#equation-8c6528a0-a5de-461c-9935-7dd280501de7" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c5a67109-7bd9-482f-b87f-203fffe04bdb">
+<span class="eqno">(102)<a class="headerlink" href="#equation-c5a67109-7bd9-482f-b87f-203fffe04bdb" title="Permalink to this equation">#</a></span>\[\begin{align}
     S = \int v \sin \theta  \sqrt{1 + \frac{1}{\tan^2 \theta}} dt
 \end{align}\]</div>
 <section id="the-ode-for-the-wire-arclength">
@@ -1265,7 +1265,7 @@ INFO: checking out_of_order
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda/envs/test/lib/python3.10/site-packages/openmdao/recorders/sqlite_recorder.py:226: UserWarning:The existing case recorder file, dymos_solution.db, is being overwritten.
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian for problem &#39;problem&#39; was computed 3 times, taking 0.1591234219999933 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian for problem &#39;problem&#39; was computed 3 times, taking 0.1591382029999977 seconds.
 Total jacobian shape: (222, 287) 
 </pre></div>
 </div>
@@ -1275,9 +1275,9 @@ Total colors vs. total size: 29 vs 287  (89.90% improvement)
 
 Sparsity computed using tolerance: 1e-25
 Time to compute sparsity:   0.1591 sec
-Time to compute coloring:   0.2715 sec
-Memory to compute coloring:   7.0859 MB
-Coloring created on: 2024-03-22 17:13:08
+Time to compute coloring:   0.2728 sec
+Memory to compute coloring:   7.1641 MB
+Coloring created on: 2024-03-26 13:45:31
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization Problem -- Optimization using pyOpt_sparse
@@ -1286,11 +1286,11 @@ Coloring created on: 2024-03-22 17:13:08
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    8.7978
-       User Objective Time :       0.2220
-       User Sensitivity Time :     1.6253
-       Interface Time :            0.6375
-       Opt Solver Time:            6.3129
+    Total Time:                    8.8192
+       User Objective Time :       0.2231
+       User Sensitivity Time :     1.6422
+       Interface Time :            0.6472
+       Opt Solver Time:            6.3067
     Calls to Objective Function :     134
     Calls to Sens Function :          103
 
