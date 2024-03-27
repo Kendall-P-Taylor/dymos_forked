@@ -804,8 +804,8 @@ three-phase orbit raising maneuver with a burn-coast-burn phase
 sequence. This example is based on the problem provided in
 Enright <span id="id1">[<a class="reference internal" href="#id24" title="Paul J Enright and Brace A Conway. Optimal finite-thrust spacecraft trajectories using collocation and nonlinear programming. Journal of Guidance, Control, and Dynamics, 14(5):981–985, 1991.">EC91</a>]</span>.</p>
 <p>The dynamics are given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c94b6d42-d423-4186-a216-ea90aae03d47">
-<span class="eqno">(58)<a class="headerlink" href="#equation-c94b6d42-d423-4186-a216-ea90aae03d47" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c39dc708-d93e-4005-bf08-6883c52b295d">
+<span class="eqno">(58)<a class="headerlink" href="#equation-c39dc708-d93e-4005-bf08-6883c52b295d" title="Permalink to this equation">#</a></span>\[\begin{align}
   \frac{dr}{dt} &amp;= v_r \\
   \frac{d\theta}{dt} &amp;= \frac{v_\theta}{r} \\
   \frac{dv_r}{dt} &amp;= \frac{v^2_\theta}{r} - \frac{1}{r^2} + a_{thrust} \sin u_1 \\
@@ -814,8 +814,8 @@ Enright <span id="id1">[<a class="reference internal" href="#id24" title="Paul J
   \frac{d \Delta v}{dt} &amp;= a_{thrust}
 \end{align}\]</div>
 <p>The initial conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f0ba8cdf-15e4-453f-851a-d6dcc39d6d22">
-<span class="eqno">(59)<a class="headerlink" href="#equation-f0ba8cdf-15e4-453f-851a-d6dcc39d6d22" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c4ace9a2-d889-4f07-93e4-3d5b1153534c">
+<span class="eqno">(59)<a class="headerlink" href="#equation-c4ace9a2-d889-4f07-93e4-3d5b1153534c" title="Permalink to this equation">#</a></span>\[\begin{align}
   r &amp;= 1 \rm{\,DU} \\
   \theta &amp;= 0 \rm{\,rad} \\
   v_r &amp;= 0 \rm{\,DU/TU}\\
@@ -824,8 +824,8 @@ Enright <span id="id1">[<a class="reference internal" href="#id24" title="Paul J
   \Delta v &amp;= 0 \rm{\,DU/TU}
 \end{align}\]</div>
 <p>and the final conditions are</p>
-<div class="amsmath math notranslate nohighlight" id="equation-63e7e840-bfaf-49a0-940d-1fe348fe9e95">
-<span class="eqno">(60)<a class="headerlink" href="#equation-63e7e840-bfaf-49a0-940d-1fe348fe9e95" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-147e906c-7d5b-4632-906f-7677fa5a2576">
+<span class="eqno">(60)<a class="headerlink" href="#equation-147e906c-7d5b-4632-906f-7677fa5a2576" title="Permalink to this equation">#</a></span>\[\begin{align}
   r &amp;= 3 \rm{\,DU} \\
   \theta &amp;= \rm{free} \\
   v_r &amp;= 0 \rm{\,DU/TU}\\
@@ -1275,8 +1275,9 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
         None
     --- burn2 ---
         None
-
-INFO: checking out_of_order
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: checking out_of_order
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: checking system
@@ -1331,7 +1332,7 @@ INFO: checking out_of_order
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO: checking auto_ivc_warnings
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian for problem &#39;problem&#39; was computed 3 times, taking 0.50308493 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian for problem &#39;problem&#39; was computed 3 times, taking 0.5291409850000264 seconds.
 Total jacobian shape: (112, 204) 
 
 
@@ -1340,10 +1341,10 @@ FWD solves: 13   REV solves: 0
 Total colors vs. total size: 13 vs 204  (93.63% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity:   0.5031 sec
-Time to compute coloring:   0.0790 sec
-Memory to compute coloring:   0.2500 MB
-Coloring created on: 2024-03-26 13:40:43
+Time to compute sparsity:   0.5291 sec
+Time to compute coloring:   0.0813 sec
+Memory to compute coloring:   0.3750 MB
+Coloring created on: 2024-03-27 13:24:00
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization Problem -- Optimization using pyOpt_sparse
@@ -1352,11 +1353,11 @@ Coloring created on: 2024-03-26 13:40:43
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                    1.8404
-       User Objective Time :       0.0899
-       User Sensitivity Time :     1.4887
-       Interface Time :            0.1490
-       Opt Solver Time:            0.1128
+    Total Time:                    2.1099
+       User Objective Time :       0.1164
+       User Sensitivity Time :     1.6933
+       Interface Time :            0.1725
+       Opt Solver Time:            0.1277
     Calls to Objective Function :      28
     Calls to Sens Function :           28
 
@@ -1872,9 +1873,7 @@ Model viewer data has already been recorded for Driver.
 </div>
 </details>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1200x600 with 3 Axes&gt;
-</pre></div>
-</div>
+<img alt="../../_images/d69dce38189d8378a47b7c23b28b53ba0f71da2e99b4ba89efbe0ff8c62e3a53.png" src="../../_images/d69dce38189d8378a47b7c23b28b53ba0f71da2e99b4ba89efbe0ff8c62e3a53.png" />
 </div>
 </div>
 </section>

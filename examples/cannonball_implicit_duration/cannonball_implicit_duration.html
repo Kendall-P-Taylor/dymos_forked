@@ -815,8 +815,8 @@ cannonball problem, we will simultaneously find the optimal design for
 the cannonball (its radius) and the optimal flight profile (its launch
 angle). However, here we will use a single phase that terminates at the
 condition</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f279585d-f5ae-447e-986e-0056f77afdac">
-<span class="eqno">(91)<a class="headerlink" href="#equation-f279585d-f5ae-447e-986e-0056f77afdac" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3712a7d5-4ebc-4b23-be9b-ea260f8b3a71">
+<span class="eqno">(91)<a class="headerlink" href="#equation-3712a7d5-4ebc-4b23-be9b-ea260f8b3a71" title="Permalink to this equation">#</a></span>\[\begin{align}
     h(t_f) = 0
 \end{align}\]</div>
 <section id="the-cannonball-sizing-component">
@@ -1100,7 +1100,9 @@ necessarily optimal once air resistance is taken into account.</p>
         [initial] 0.0000e+00 &lt;= ke &lt;= 4.0000e+05  [J]
 
 Model viewer data has already been recorded for Driver.
-Model viewer data has already been recorded for Driver.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Model viewer data has already been recorded for Driver.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Coloring for &#39;traj.phases.phase.rhs_all&#39; (class CannonballODE)
@@ -1110,12 +1112,12 @@ FWD solves: 6   REV solves: 0
 Total colors vs. total size: 6 vs 303  (98.02% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity:   0.1141 sec
-Time to compute coloring:   0.0382 sec
+Time to compute sparsity:   0.1154 sec
+Time to compute coloring:   0.0402 sec
 Memory to compute coloring:   0.2500 MB
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian for problem &#39;cannonball_implicit_duration&#39; was computed 3 times, taking 0.2697808469999927 seconds.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Full total jacobian for problem &#39;cannonball_implicit_duration&#39; was computed 3 times, taking 0.28933331700000053 seconds.
 Total jacobian shape: (98, 100) 
 
 
@@ -1124,10 +1126,10 @@ FWD solves: 27   REV solves: 0
 Total colors vs. total size: 27 vs 100  (73.00% improvement)
 
 Sparsity computed using tolerance: 1e-25
-Time to compute sparsity:   0.2698 sec
-Time to compute coloring:   0.0932 sec
-Memory to compute coloring:   2.2148 MB
-Coloring created on: 2024-03-26 13:39:19
+Time to compute sparsity:   0.2893 sec
+Time to compute coloring:   0.0953 sec
+Memory to compute coloring:   2.2734 MB
+Coloring created on: 2024-03-27 13:22:29
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Optimization Problem -- Optimization using pyOpt_sparse
@@ -1136,11 +1138,11 @@ Coloring created on: 2024-03-26 13:39:19
 
     Solution: 
 --------------------------------------------------------------------------------
-    Total Time:                   17.7844
-       User Objective Time :      15.0087
-       User Sensitivity Time :     2.4503
-       Interface Time :            0.1838
-       Opt Solver Time:            0.1416
+    Total Time:                   18.8437
+       User Objective Time :      15.9345
+       User Sensitivity Time :     2.5517
+       Interface Time :            0.1997
+       Opt Solver Time:            0.1577
     Calls to Objective Function :     239
     Calls to Sens Function :           55
 
